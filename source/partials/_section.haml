@@ -1,0 +1,26 @@
+- title ||= 'Учет имущества'
+- items_basic ||= ''
+- items_advanced ||= ''
+- pattern_id ||= 0
+- active_view ||= 'basic'
+- basic_section_class = active_view == 'basic' ? 'is-active' : nil
+- advanced_section_class = active_view == 'basic' ? nil : 'is-active'
+- advanced_overlay ||= false
+
+.section.drop-shadow
+  .section-inner
+    .section-sidebar{style: "background-image: url('images/pattern-section-#{ pattern_id }.png')"}
+      %h2= title
+      .section-toggle
+        %li{class: basic_section_class} Базовый
+        %li{class: advanced_section_class} Углубленный
+    .section-view{class: basic_section_class}
+      = partial('partials/section/courses', locals: {items: items_basic})
+    .section-view.section-view-advanced{class: advanced_section_class}
+      = partial('partials/section/courses', locals: {items: items_advanced})
+      - if advanced_overlay
+        .section-overlay
+          .section-modal.drop-shadow
+            Курсы продвинутого уровня доступны обладателям базового сертификата — вам осталось 1650 баллов.
+            = partial('partials/chunks/drop-shadow')
+  = partial('partials/chunks/drop-shadow')

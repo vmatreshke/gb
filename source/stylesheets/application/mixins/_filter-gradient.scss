@@ -1,0 +1,4 @@
+@mixin filter-gradient($start-color, $end-color, $orientation: vertical) {
+  $gradient-type: if($orientation == vertical, 0, 1);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(gradientType=#{ $gradient-type }, startColorStr="#{ ie-hex-str($start-color) }", endColorStr="#{ ie-hex-str($end-color) }")';
+}

@@ -1,0 +1,9 @@
+- values  = ('A'..'D').to_a
+- numbers = [0, 18000, 70000, 74000]
+
+.choice
+  - values.each_index do |index|
+    %label.choice-option
+      %input{type: 'radio', name: 'choice', value: values[index], data: {validate: index == 0 ? 'required' : nil}}
+      .choice-option-inner
+        = partial('partials/utils/number', locals: {number: numbers[index], unit: 'руб.'})

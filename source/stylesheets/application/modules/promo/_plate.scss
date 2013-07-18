@@ -1,0 +1,13 @@
+.promo-plate {
+  background: #FFF;
+  border-radius: 2px;
+  line-height: 18px;
+  margin: -20px auto 60px;
+  padding: 14px;
+  text-align: center;
+  width: 410px;
+
+  .promo-certificates + & {
+    position: relative;
+  }
+}

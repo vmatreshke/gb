@@ -1,0 +1,88 @@
+news:
+  youtube: "dn_UMtD1eqM"
+  thumb:
+    src: "images/static/media/unknown-4.jpg"
+    width: 464
+    height: 261
+
+course:
+  youtube: "dn_UMtD1eqM"
+  thumb:
+    src: "images/static/media/unknown-5.jpg"
+    width: 560
+    height: 315
+
+mosaic:
+  - title: "Основные средства"
+    youtube: "dn_UMtD1eqM"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-6.jpg"
+      width: 272
+      height: 153
+  - title: "Транспортный налог"
+    youtube: "7-j7viQLj58"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-7.jpg"
+      width: 272
+      height: 153
+  - title: "Налог на&nbsp;добавленную стоимость"
+    youtube: "grcbnFb20LE"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-8.jpg"
+      width: 272
+      height: 153
+  - title: "Налог на&nbsp;добавленную стоимость"
+    youtube: "R28Fv1wDMe8"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-9.jpg"
+      width: 272
+      height: 153
+
+promo_screen:
+  main:
+    youtube: "R28Fv1wDMe8"
+    thumb:
+      src: "images/static/media/R28Fv1wDMe8-large.jpg"
+      width: 768
+      height: 432
+  footer:
+  - title: "О&nbsp;школе"
+    youtube: "R28Fv1wDMe8"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/R28Fv1wDMe8.jpg"
+      width: 128
+      height: 72
+  - title: "Учеба"
+    youtube: "dn_UMtD1eqM"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-1.jpg"
+      width: 128
+      height: 72
+  - title: "Новое в&nbsp;2013"
+    youtube: "7-j7viQLj58"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-2.jpg"
+      width: 128
+      height: 72
+  - title: "Интервью"
+    youtube: "grcbnFb20LE"
+    data:
+      static: true
+    thumb:
+      src: "images/static/media/unknown-3.jpg"
+      width: 128
+      height: 72

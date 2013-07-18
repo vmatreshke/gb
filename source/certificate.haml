@@ -1,0 +1,33 @@
+---
+title: "Сертификат"
+sitemap: "(для владельца)"
+sitemap_category: "Сертификат"
+---
+
+.l-container
+  %table.l-triplet
+    %colgroup
+      %col.l-triplet-col.l-triplet-col-1
+      %col.l-triplet-col.l-triplet-col-1-2
+      %col.l-triplet-col.l-triplet-col-2
+      %col.l-triplet-col.l-triplet-col-2-3
+      %col.l-triplet-col.l-triplet-col-3
+    %tr
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        .l-header
+          %a.button.button-white.button-prev.pull-left{href: 'courses'} Все курсы
+          .headline.headline-small.hide-text.pull-left Высшей Школы Главбуха
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        = partial('partials/certificate', locals: {nail: true, single: true})
+        = partial('partials/social')
+        %p.text-center Похвастайтесь будущим работодателям, коллегам и друзьям
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        = partial('partials/footer')

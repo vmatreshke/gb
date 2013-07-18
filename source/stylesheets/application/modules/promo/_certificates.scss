@@ -1,0 +1,27 @@
+.promo-certificates {
+  height: 547px;
+  min-width: 880px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  > .certificate {
+    margin-left: (-6.19em / 2);
+    margin-top: (-4.49em / 2);
+    position: absolute;
+    top: 50%;
+
+    &.is-clickable {
+      cursor: pointer;
+    }
+
+    .no-js & {
+      display: none;
+
+      &:first-child {
+        display: block;
+        left: 50%;
+      }
+    }
+  }
+}

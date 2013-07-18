@@ -1,0 +1,26 @@
+---
+layout: layout_course
+title: "Материалы"
+sitemap: "Страница курса"
+sitemap_category: "Первая пачка"
+---
+
+- content_for :triplet_rows do
+  %tr
+    %td.l-triplet-cell{rowspan: 3}
+      = partial('partials/reference', locals: data.reference.nav.merge({active: 0}))
+    %td.l-triplet-cell
+      = partial('partials/author', locals: data.author.ayudin)
+    %td.l-triplet-cell
+      = partial('partials/course-button')
+  %tr
+    %td.l-triplet-cell{colspan: 3}
+      %hr
+  %tr
+    %td.l-triplet-cell
+      = partial('partials/content/course')
+    %td.l-triplet-cell
+      %h4{style: 'margin-top: 20px'} Рекомендуем
+      = partial('partials/reference', locals: data.reference.recommendations)
+      %hr
+      = partial('partials/labeled')

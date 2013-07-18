@@ -1,0 +1,87 @@
+.choice {
+  background-clip: padding-box;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  border: 1px solid #b3b3b3;
+  box-shadow: inset 0 1px #d9d9d9;
+  margin: 12px 0 0;
+  position: relative;
+
+  &.is-disabled {
+    @include opacity(0.4);
+  }
+}
+
+.choice-option {
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+
+  &.is-checked {
+    font-weight: bold;
+    > .choice-option-inner:after {
+      content: ' '; // что-то, чтобы ИЕ8 подхватил стили для псевоэлемента;
+      display: block;
+    }
+  }
+
+  > input {
+    position: absolute;
+    right: 150%;
+  }
+
+  .choice.is-disabled > & {
+    cursor: default;
+  }
+}
+
+.choice-option-inner {
+  border-top: 1px solid #d9d9d9;
+  margin: 0 10px;
+  padding: 15px 0 15px 34px;
+
+  .choice-option:first-child > & {
+    border: 0;
+  }
+
+  &:before,
+  &:after {
+    // @include position(absolute, 50% false false 10px);
+    content: '';
+    float: left;
+  }
+
+  &:before {
+    @include size(22px);
+    float: left;
+    margin: -2px 0 0 -34px;
+
+    [type='checkbox'] + & {
+      background: #FFF;
+      border-radius: 3px;
+      border: 1px solid #d9d9d9;
+      box-shadow: inset 0 1px 1px -1px #b2b2b2;
+    }
+
+    [type='radio'] + & {
+      @include size(24px);
+      background: sprite($sprite-main, choice-radiobox);
+    }
+  }
+
+  &:after {
+    display: none;
+
+    [type='checkbox'] + & {
+      @include size(15px 13px);
+      background: sprite($sprite-main, choice-checkbox-tick);
+      margin: 4px 0 0 -29px;
+    }
+
+    [type='radio'] + & {
+      @include size(12px);
+      background: sprite($sprite-main, choice-radiobox-tick);
+      margin: 4px 0 0 -28px;
+    }
+  }
+}

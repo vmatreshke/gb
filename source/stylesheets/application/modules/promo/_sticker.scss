@@ -1,0 +1,93 @@
+@mixin promo-sticker($id, $background-color, $color, $rotate, $top, $left, $z-index) {
+  .promo-sticker-#{ $id } {
+    @include background-image(
+      linear-gradient($rotate, rgba($background-color, 0.45), rgba($background-color, 0) 40%),
+      image-url('pattern-promo-sticker.png'),
+      linear-gradient(rgba(#FFF, 0.45), rgba(#FFF, 0) 20%)
+    );
+    @include position($top false false $left);
+
+    @if $rotate != 0 {
+      @include transform(rotate($rotate));
+    }
+
+    background-color: $background-color;
+    box-shadow: 0 1px 1px rgba($color, 0.3);
+    color: $color;
+    z-index: $z-index;
+
+    > .promo-sticker-photo {
+      @include transform(rotate(-$rotate));
+    }
+  }
+}
+
+.promo-sticker-stack {
+  margin: auto;
+  overflow: hidden;
+  padding: 35px 0;
+  position: relative;
+  width: 870px;
+  z-index: 0;
+}
+
+.promo-sticker-stack-inner {}
+
+.promo-sticker {
+  @include box-sizing(border-box);
+  @include size(290px);
+  -webkit-transform: translate3d( 0, 0, 0);
+  float: left;
+  font-family: Georgia, serif;
+  font-style: italic;
+  padding: 18px 7px 25px 22px;
+  position: relative;
+}
+
+@include promo-sticker(a, #eff8fb, #2c6267, -4.6deg,  11px,  25px, 1);
+@include promo-sticker(b, #f7fef1, #57780f,  3.5deg, false, false, 2);
+@include promo-sticker(c, #fbfbef, #674a03,  3.5deg, -14px, -25px, 1);
+@include promo-sticker(d, #f5f2f8, #42395a, -5.8deg,  17px,  23px, 1);
+@include promo-sticker(e, #f6f1e7, #7e6c35,    1deg, -28px,  -7px, 2);
+@include promo-sticker(f, #fbfbef, #674a03,  7.7deg,  12px, -27px, 1);
+@include promo-sticker(g, #f6f4e8, #7a6015, -4.5deg,  18px,  12px, 1);
+@include promo-sticker(h, #edf6e9, #57780f,    0deg, -27px,  -3px, 2);
+@include promo-sticker(i, #e8f3f4, #31637b,  7.2deg,   9px, -18px, 3);
+
+.promo-sticker-a,
+.promo-sticker-d,
+.promo-sticker-h {
+  padding-right: 36px;
+}
+
+.promo-sticker-c,
+.promo-sticker-f {
+  padding-left: 36px;
+}
+
+.promo-sticker-photo {
+  @include position(absolute, 6px 16px false false);
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+
+  > img {
+    display: block;
+  }
+
+  &:after {
+    @include position(absolute, -23px 20px false false);
+    @include size(42px 46px);
+    background: sprite($sprite-promo, sticker-clip);
+    content: '';
+    z-index: 2;
+  }
+}
+
+.promo-sticker-header {
+  @include font-height(12px, 16px);
+}
+
+.promo-sticker-main {
+  @include font-height(14px, 22px);
+  margin-top: 13px;
+}

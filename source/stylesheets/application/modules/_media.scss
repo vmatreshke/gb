@@ -1,0 +1,36 @@
+.media {
+  background: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  > iframe,
+  > img {
+    display: block;
+  }
+}
+
+a.media {
+  &:after {
+    @include position(absolute, 50% false false 50%);
+    @include size(44px);
+    background: sprite($sprite-main, media-play);
+    content: '';
+    margin: -22px 0 0 -22px;
+    opacity: 0.8;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.7;
+    }
+  }
+}
+
+a.media-large {
+  &:after {
+    @include size(88px);
+    background: sprite($sprite-main, media-large-play);
+    margin: -44px 0 0 -44px;
+  }
+}

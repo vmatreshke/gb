@@ -1,0 +1,25 @@
+.form-field {
+  margin-bottom: 40px;
+}
+
+.form-label {
+  display: block;
+  margin: 5px 0 3px;
+}
+
+.form-actions {
+  background: #e8e8e8;
+  border-radius: 3px;
+  padding: 16px 20px 27px;
+
+  > .button {
+    float: left;
+    text-align: center;
+    width: 172px;
+  }
+}
+
+.form-actions-aside {
+  float: left;
+  margin: 6px 0 0 20px;
+}

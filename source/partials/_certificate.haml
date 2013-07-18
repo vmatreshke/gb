@@ -1,0 +1,9 @@
+- gold ||= false
+- nail ||= false
+- single ||= false
+
+.certificate{class: single ? 'certificate-single' : nil}
+  - if nail
+    .certificate-nail
+  .certificate-inner<
+    %img{src: "images/static/certificate/#{ gold ? 'gold' : 'simple' }.jpg", width: 585, height: 411}

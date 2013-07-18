@@ -1,0 +1,8 @@
+.promo-mosaic
+  - data.media.mosaic.each do |item|
+    .promo-mosaic-item
+      .promo-mosaic-main.drop-shadow
+        = partial 'partials/media', locals: item
+        = partial 'partials/chunks/drop-shadow'
+      .promo-mosaic-footer= item.title
+  .promo-mosaic-pointer

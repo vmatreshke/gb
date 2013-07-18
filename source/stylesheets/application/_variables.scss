@@ -1,0 +1,6 @@
+$sprite-main: sprite-map('sprite-main/*.png', $layout: smart);
+$sprite-promo: sprite-map('sprite-promo/*.png', $layout: smart);
+$sprite-repeat-x: sprite-map('sprite-repeat-x/*.png', $layout: vertical);
+$sprite-repeat-y: sprite-map('sprite-repeat-y/*.png', $layout: horizontal);
+
+$sprite-assets: sprite-map('sprite-assets/*.png', $layout: smart);

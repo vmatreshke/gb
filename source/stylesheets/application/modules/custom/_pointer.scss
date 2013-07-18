@@ -1,0 +1,9 @@
+// margin: -113px 0 0 -59px;
+
+.pointer {
+  @include position(relative, 18px false false 10px);
+  @include size(52px 130px);
+  background: sprite($sprite-main, custom-pointer);
+  float: left;
+  margin: -130px 0 0 -52px;
+}

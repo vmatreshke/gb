@@ -1,0 +1,74 @@
+.promo-slides {
+  margin-bottom: 35px;
+}
+
+.promo-slides-nav {
+  @include font-height(0, 0);
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  white-space: nowrap;
+
+  > li {
+    @include font-height(14px, 1);
+    @include linear-gradient(#fefefe, #f5f5f5);
+    background-clip: padding-box;
+    border: 1px solid #cfcfcf;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -1px;
+    padding: 8px 25px;
+    position: relative;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      margin: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:hover {
+      @include linear-gradient(#FFF, #e8e8e8);
+    }
+
+    &:active {
+      @include linear-gradient(darken(#FFF, 2%), darken(#f1f1f1, 2%));
+      box-shadow: inset 0 3px 4px rgba(#000, 0.2);
+    }
+
+    &.is-active {
+      background: #e6debc;
+      border: 0;
+      box-shadow:
+        inset 0 3px 4px rgba(#74561b, 0.25),
+        inset 0 0 4px rgba(#745523, 0.15);
+      cursor: default;
+      padding: 9px 26px;
+
+      &:after {
+        @include position(absolute, false false -13px 50%);
+        @include size(26px 17px);
+        background: sprite($sprite-promo, slides-arrow);
+        content: '';
+        margin-left: -13px;
+      }
+    }
+  }
+}
+
+.promo-slides-main {}
+.promo-slides-pane {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  > img {
+    display: block;
+    margin: auto;
+  }
+}

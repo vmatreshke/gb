@@ -1,0 +1,41 @@
+nav:
+  classes: ["reference-nav", "drop-shadow"]
+  drop_shadow: true
+  items:
+    - title: "Введение"
+      href: "course-page"
+      duration: 3
+
+    - title: "Постановка на&nbsp;учет и&nbsp;оценка"
+      href: "course-page"
+      duration: 6
+
+    - title: "Передача в&nbsp;производство"
+      href: "course-page"
+      duration: 6
+
+    - title: "Продажа и&nbsp;прочее выбытие"
+      href: "course-page-important"
+      duration: 4
+      special: important
+
+    - title: "Что нужно знать, заключая договор аренды"
+      href: "course-article"
+      special: article
+
+recommendations:
+  items:
+    - title: "Выкупили арендованное имущество"
+      small: "Главбух"
+      href: "#"
+
+    - title: "Этот акт подтвердит расходы на&nbsp;новую резину для служебного авто"
+      small: "Главбух"
+      href: "#"
+
+    - title: "Правила безопасного налогового учета расходов на&nbsp;компьютерные программы"
+      small: "Семинар для бухгалтера"
+      href: "#"
+
+    - title: "Ещё 14 статей"
+      href: "#"

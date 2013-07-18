@@ -1,0 +1,34 @@
+@mixin asset($name) {
+  .asset-#{ $name } {
+    @include sprite-dimensions($sprite-assets, $name);
+    background-position: sprite-position($sprite-assets, $name);
+  }
+}
+
+.asset {
+  background-image: sprite-url($sprite-assets);
+  display: inline-block;
+}
+
+@include asset(agenda-a);
+@include asset(agenda-b);
+@include asset(agenda-c);
+@include asset(agenda-d);
+@include asset(agenda-e);
+@include asset(benefits-a);
+@include asset(benefits-b);
+@include asset(benefits-c);
+@include asset(benefits-d);
+@include asset(benefits-e);
+@include asset(board-certificate);
+@include asset(board-exam);
+@include asset(board-flipchart);
+@include asset(oxford-cap);
+@include asset(pointer-a);
+@include asset(pointer-b);
+@include asset(pointer-c);
+@include asset(pointer-d);
+@include asset(stencil-a);
+@include asset(stencil-b);
+@include asset(stencil-c);
+@include asset(university);

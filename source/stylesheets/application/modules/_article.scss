@@ -1,0 +1,42 @@
+.article {
+  background: #FFF;
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #EEE;
+  padding: 30px 5% 80px 8%;
+  position: relative;
+
+  .button.pull-right {
+    margin-top: 6px;
+  }
+}
+
+.article-inner {}
+
+.article:before,
+.article:after,
+.article-inner:before {
+  background-image: sprite-url($sprite-main);
+  content: '';
+  position: absolute;
+}
+
+.article:before {
+  @include sprite-dimensions($sprite-main, paper-top-right);
+  background-position: sprite-position($sprite-main, paper-top-right);
+  right: -8px;
+  top: 0;
+}
+
+.article:after {
+  @include sprite-dimensions($sprite-main, paper-bottom-right);
+  background-position: sprite-position($sprite-main, paper-bottom-right);
+  bottom: -9px;
+  right: -12px;
+}
+
+.article-inner:before {
+  @include sprite-dimensions($sprite-main, paper-bottom-left);
+  background-position: sprite-position($sprite-main, paper-bottom-left);
+  bottom: -11px;
+  left: 0;
+}

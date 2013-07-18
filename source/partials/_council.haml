@@ -1,0 +1,11 @@
+.council
+  - data.council.flatten(1).each do |item|
+    .council-item
+      %img{item.thumb}
+      .council-main
+        .council-category= item.category
+        .council-title
+          %b= "#{ item.title },"
+          = item.content
+        %hr
+        .council-quote.text-large= item.popover

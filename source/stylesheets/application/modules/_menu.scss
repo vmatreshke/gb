@@ -1,0 +1,35 @@
+.menu {
+  @include font-height(13px, 1);
+  font-weight: bold;
+  list-style: none;
+  margin: -12px 0 35px;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+
+  > li {
+    float: left;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.is-current {
+      background: #FFF;
+      border-radius: 3px;
+      margin: -7px -8px -7px 12px;
+      padding: 7px 8px;
+
+      &:first-child {
+        margin-left: -8px;
+      }
+    }
+  }
+
+  .link {
+    @extend .link-black;
+    margin: -6px -8px;
+    padding: 6px 8px;
+  }
+}

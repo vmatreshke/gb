@@ -1,0 +1,9 @@
+- done ||= []
+- current = done.last.to_i + 1
+- has_error ||= false
+
+.elevator.drop-shadow
+  %ul
+    - (1..10).each do |i|
+      %li.elevator-level{class: current == i ? ['is-active', has_error ? 'is-error' : nil] : done.index(i) ? 'is-done' : nil}= i > 9 ? "<span class=\"hdigit\">#{ i }</span>" : i
+  = partial('partials/chunks/drop-shadow')

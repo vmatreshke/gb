@@ -1,0 +1,26 @@
+@function append-ms-filter-property($list, $property, $value, $default-value) {
+  @if $value != $default-value {
+    @if type-of($value) == string {
+      @return append($list, #{ $property }="#{ $value }", comma);
+    }
+    @else {
+      @return append($list, #{ $property }=#{ $value }, comma);
+    }
+  }
+  @else {
+    @return $list;
+  }
+}
+
+@mixin ms-filter-alpha-image-loader($src, $sizing-method: 'image') {
+  $properties: ();
+  $properties: append-ms-filter-property($properties, 'src', $src, false);
+  $properties: append-ms-filter-property($properties, 'sizingMethod', $sizing-method, 'image');
+  -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(#{ $properties })';
+}
+
+@mixin ms-filter-opacity($opacity: 0) {
+  $properties: ();
+  $properties: append-ms-filter-property($properties, 'opacity', $opacity, 0);
+  filter: unquote('progid:DXImageTransform.Microsoft.Alpha(#{ $properties })');
+}

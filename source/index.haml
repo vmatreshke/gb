@@ -1,0 +1,33 @@
+.l-container{style: 'margin: 20px auto'}
+  .article.formatted.formatted-serif.text-bound
+    .article-inner
+      %ul
+        %li<
+          %b= link_to 'Лифт из тестов', '/test-sandbox.html'
+        %li= link_to 'Перечень курсов', '/courses.html'
+        %li
+          Страницы курсов
+          %ul
+            %li= link_to 'Страница курса', '/course-page.html'
+            %li= link_to 'Страница авторского курса', '/course-page-important.html'
+            %li= link_to 'Методичка курса', '/course-article.html'
+        %li
+          Тест
+          %ul
+            %li= link_to 'Варианты-радиокнопки', '/test-radioboxes.html'
+            %li= link_to 'Варианты-чекбоксы', '/test-checkboxes.html'
+            %li= link_to 'Всё плохо', '/test-failure.html'
+            %li= link_to 'Всё хорошо', '/test-success.html'
+        %li
+          Второстепенные страницы
+          %ul
+            %li= link_to 'Новости', '/news.html'
+            %li= link_to 'Ученый совет', '/council.html'
+            %li= link_to 'Частые вопросы', '/questions.html'
+        %li
+          Сертификат
+          %ul
+            %li= link_to 'Для владельца', '/certificate.html'
+            %li= link_to 'Для гостей', '/certificate-visitor.html'
+        %li= link_to 'Регистрация', '/registration.html'
+        %li= link_to 'Промо-страница', '/promo.html'

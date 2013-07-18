@@ -1,0 +1,49 @@
+---
+layout: layout_exam
+title: "Материалы: тест"
+---
+
+- content_for :exam do
+  .exam.drop-shadow
+    .exam-inner
+      .exam-aside
+        = partial('partials/elevator', locals: {done: (1..3).to_a})
+      .exam-main
+        %button.button.button-white.button-large#sandbox-proceed Ответить правильно
+        %button.button.button-white.button-large#sandbox-fail Ошибиться
+        %button.button.button-white.button-large#sandbox-succeed Пройти тест
+        %pre
+          :preserve
+            // Ответили правильно, едем дальше:
+            $('.elevator').data('app:elevator').proceed();
+
+            // Ошиблись, сотрясаемся:
+            $('.elevator').data('app:elevator').fail();
+
+            // Прошли тест, шарик улетает:
+            $('.balloon').data('app:balloon').vanish();
+
+
+    = partial('partials/chunks/drop-shadow')
+
+- content_for :progress do
+  = partial('partials/progress', locals: data.progress.test)
+
+- content_for :score do
+  = partial('partials/exam/balloon')
+
+- content_for :scripts do
+  :javascript
+    app.module({
+        init: function () {
+            $('#sandbox-proceed').click(function () {
+              $('.elevator').data('app:elevator').proceed();
+            });
+            $('#sandbox-fail').click(function () {
+              $('.elevator').data('app:elevator').fail();
+            });
+            $('#sandbox-succeed').click(function () {
+              $('.balloon').data('app:balloon').vanish();
+            });
+        }
+    });

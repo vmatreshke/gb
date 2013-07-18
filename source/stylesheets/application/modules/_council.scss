@@ -1,0 +1,36 @@
+.council {
+  margin-top: 35px;
+}
+
+.council-main {}
+
+.council-item {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-left: 155px;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  > img {
+    float: left;
+    margin-left: -155px;
+  }
+}
+
+.council-category {
+  @include font-height(10px, 1);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.council-title {
+  @include font-height(13px, 20px);
+  margin: 6px 0 8px;
+}
+
+.council-quote {
+  margin-top: -4px;
+  text-indent: -0.5em;
+}

@@ -1,0 +1,12 @@
+.fotorama{data: {nav: 'false', width: '100%', height: 400, background: 'transparent', zoomToFit: 'false'}}
+  - abc = ('a'..'i').to_a
+  - data.stickers.each do |item_row|
+    .promo-sticker-stack
+      .promo-sticker-stack-inner
+        - item_row.each do |item|
+          .promo-sticker{class: "promo-sticker-#{ abc.shift }"}
+            - if item.photo
+              .promo-sticker-photo<
+                %img{src: item.photo, width: 70, height: 70}
+            .promo-sticker-header= item.header
+            .promo-sticker-main= item.main

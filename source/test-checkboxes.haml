@@ -1,0 +1,15 @@
+---
+layout: layout_exam
+title: "Материалы: тест"
+sitemap: "(с чекбоксами)"
+sitemap_category: "Страница с тестом"
+---
+
+- content_for :exam do
+  = partial('partials/exam-checkboxes')
+
+- content_for :progress do
+  = partial('partials/progress', locals: data.progress.test)
+
+- content_for :score do
+  = partial('partials/exam/score')

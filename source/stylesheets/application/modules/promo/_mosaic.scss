@@ -1,0 +1,44 @@
+$promo-mosaic-item-width: 270px;
+$promo-mosaic-item-margin-right: 30px;
+
+.promo-mosaic {
+  font-size: 0;
+  margin-right: -30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.promo-mosaic-item {
+  @include size(270px false);
+  display: inline-block;
+  margin: 0 30px 25px 0;
+  vertical-align: top;
+}
+
+.promo-mosaic-main {
+  > .media {
+    display: block;
+  }
+}
+
+.promo-mosaic-footer {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.promo-mosaic-pointer {
+  @include size(570px 150px);
+  display: inline-block;
+  margin: 0 -30px -150px 0;
+  vertical-align: top;
+
+  &:after {
+    @include size(323px 118px);
+    background: sprite($sprite-promo, mosaic-pointer);
+    content: '';
+    margin-top: 25px;
+    position: absolute;
+    right: 30px;
+  }
+}

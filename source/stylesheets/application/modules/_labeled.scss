@@ -1,0 +1,21 @@
+.labeled {
+  display: table;
+  width: 100%;
+}
+
+.labeled-label,
+.labeled-content {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.labeled-label {
+  color: #494a49;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.labeled-content {
+  padding-left: 12px;
+  width: 1px;
+}

@@ -1,0 +1,14 @@
+- items = data.courses[items]
+
+.courses
+  - if items.available
+    - items.available.each do |item|
+      = partial('partials/section/courses-item', locals: {item: item})
+  - if items.under_construction
+    .courses-divider Скоро откроются:
+    - items.under_construction.each do |item|
+      = partial('partials/section/courses-item', locals: {item: item})
+  - if items.locked
+    .courses-divider После сдачи предыдущих тестов откроются следующие курсы:
+    - items.locked.each do |item|
+      = partial('partials/section/courses-item', locals: {item: item})

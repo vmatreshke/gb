@@ -1,0 +1,42 @@
+.button-nano {
+  @include font-height(10px, 12px);
+  border-radius: 2px;
+  border: 0;
+  height: 16px;
+  padding: 2px 5px;
+
+  > .icon {
+    margin-top: -7px;
+  }
+}
+
+.button-small {
+  @include font-height(11px, 12px);
+  height: 24px;
+  padding: 5px 8px;
+}
+
+.button-large {
+  @include font-height(14px, 16px);
+  height: 34px;
+  padding: 8px 16px;
+}
+
+.button-xlarge {
+  @include font-height(18px, 22px);
+  height: 48px;
+  padding: 12px 24px;
+}
+
+.button-xxlarge {
+  @include font-height(24px, 28px);
+  font-size: 24px;
+  height: 60px;
+  padding: 15px 28px;
+}
+
+.button-xxxlarge {
+  @include font-height(26px, 32px);
+  height: 66px;
+  padding: 16px 36px;
+}

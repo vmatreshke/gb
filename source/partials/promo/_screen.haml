@@ -1,0 +1,10 @@
+.promo-screen
+  .promo-screen-main
+    = partial('partials/media', locals: data.media.promo_screen.main)
+  .promo-screen-nav
+    - data.media.promo_screen.footer.each do |item|
+      .promo-screen-item{class: item == data.media.promo_screen.footer[0] ? 'is-active' : nil}
+        .promo-screen-item-main
+          = partial('partials/media', locals: item)
+        = item.title
+  = partial 'partials/promo/chunks/screen'

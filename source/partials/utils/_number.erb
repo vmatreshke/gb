@@ -1,0 +1,13 @@
+<%
+  number = number.to_s
+  if number.size > 4
+    number.reverse!
+    positions = []
+    while number.size > 0 do
+      positions << number.slice!(0..2).reverse
+    end
+    positions.reverse!
+  else
+    positions = [number]
+  end
+%><%= positions.join('<span class="hs"></span>') %><% if defined?(unit) %><span class="hsr">&nbsp;</span><%= unit %><% end %>

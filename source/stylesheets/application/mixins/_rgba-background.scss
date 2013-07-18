@@ -1,0 +1,9 @@
+@mixin rgba-background($color, $alpha, $ie-clickable: false) {
+  $background: rgba($color, $alpha);
+  background: $background;
+
+  .lt-ie9 & {
+    background: if($ie-clickable, url('#'), none);
+    @include filter-gradient($background, $background);
+  }
+}

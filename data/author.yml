@@ -1,0 +1,19 @@
+ayudin:
+  thumb:
+    src: "images/static/author/ayudin.jpg"
+    width: 34
+    height: 34
+  title: Андрей Юдин
+  lines:
+    - "ведущий эксперт"
+    - "журнала «Главбух»"
+
+lkotova:
+  thumb:
+    src: "images/static/author/lkotova.jpg"
+    width: 58
+    height: 58
+  title: Любовь Котова
+  lines:
+    - "зам. директора Департамента развития социального страхования и&nbsp;гособеспечения Минздрава России"
+  important: true

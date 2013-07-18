@@ -1,0 +1,27 @@
+.inset {
+  > p {
+    margin: 8px 0 0;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.inset-tip {
+  background: #FFF4D6;
+  margin: 24px 0;
+  min-height: 33px;
+  padding: 14px 67px 14px 20px;
+  position: relative;
+  &:after {
+    @include size(27px 31px);
+    @include position(absolute, 14px 20px false false);
+    background: sprite($sprite-main, inset-tip-bulb);
+    content: '';
+  }
+}
+
+.inset-reference {
+  color: #693;
+  margin: 8px 20px 16px;
+}

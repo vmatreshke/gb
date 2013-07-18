@@ -1,0 +1,26 @@
+.balloon {
+  position: relative;
+  z-index: 0;
+}
+
+.balloon-body {
+  @include position(absolute, -100px false false -46px);
+  @include sprite-dimensions($sprite-main, balloon-body);
+  background: sprite($sprite-main, balloon-body);
+  z-index: 2;
+}
+
+.balloon-label {
+  @include font-height(18px, 1);
+  color: #FFF;
+  margin-top: 101px;
+  text-align: center;
+  width: 199px;
+}
+
+.balloon-shadow {
+  @include position(absolute, -35px false false -22px);
+  @include sprite-dimensions($sprite-main, balloon-shadow);
+  background: sprite($sprite-main, balloon-shadow);
+  z-index: 1;
+}

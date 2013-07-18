@@ -1,0 +1,33 @@
+.social {
+  font-size: 0;
+  line-height: 0;
+  margin: 11px 0 17px;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+}
+
+.social-button {
+  display: inline-block;
+  margin-left: 14px;
+  vertical-align: top;
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.social-button-odnoklassniki {
+  width: 93px;
+}
+
+.social-button-gplus {
+  width: 59px;
+}
+
+.social-button-twitter {
+  width: 94px;
+}
+
+.social-button-facebook {
+  width: 101px;
+}

@@ -1,0 +1,9 @@
+- values  = ('A'..'D').to_a
+- numbers = ['Крупную', 'Весомую', 'Огромную', 'Несущественную']
+
+.choice
+  - values.each_index do |index|
+    %label.choice-option
+      %input{type: 'checkbox', name: "choice[]", value: values[index], data: {validate: index == 0 ? 'required' : nil}}
+      .choice-option-inner
+        = numbers[index]

@@ -1,0 +1,10 @@
+- values  = ('A'..'D').to_a
+- numbers = ['Крупную', 'Весомую', 'Огромную', 'Несущественную']
+- checked = [1, 2, 3]
+
+.choice.is-disabled
+  - values.each_index do |index|
+    %label.choice-option
+      %input{type: 'checkbox', name: 'choice', value: values[index], disabled: true, checked: checked.index(index)}
+      .choice-option-inner
+        = numbers[index]

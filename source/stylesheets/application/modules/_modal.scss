@@ -1,0 +1,36 @@
+  .modal {
+  @include rgba-background(#6d6e73, 0.95);
+  border-radius: 4px;
+  color: #FFF;
+  display: none;
+  padding: 50px 70px 70px;
+  width: 500px;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.modal-header {
+  @include font-height(22px, 28px);
+  font-weight: normal;
+  margin-bottom: 24px;
+
+  > .icon.pull-left {
+    margin: 5px 0 0 -20px;
+  }
+}
+
+.modal-body {
+  overflow: hidden;
+}
+
+.modal-body-block {
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+
+  p {
+    margin: 14px 0 0;
+  }
+}

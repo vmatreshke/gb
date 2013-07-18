@@ -1,0 +1,10 @@
+- important ||= false
+
+.text-bound
+  .author{class: important ? 'author-important' : nil}
+    %img{thumb}
+    %b= "#{ title },"
+    = lines.first
+    - lines.drop(1).each do |line|
+      %br
+      = line

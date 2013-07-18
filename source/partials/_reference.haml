@@ -1,0 +1,23 @@
+- active  ||= nil
+- classes ||= nil
+- drop_shadow ||= nil
+
+.reference{class: classes}
+  %ul.reference-inner
+    - items.each do |item|
+      %li{class: active ? item == items[active] ? 'is-active' : nil : nil}<
+        - if active ? item == items[active] ? 'is-active' : nil : nil
+          %b>= item.title
+        - else
+          %a.link{href: item.href, class: item.dashed ? 'link-dashed' : nil}>= item.title
+        - if item.special == "important" || item.duration || item.small
+          &nbsp;
+          %nobr>
+            - if item.special == "important"
+              %span.icon.icon-star>
+            - if item.duration
+              %small>= "#{ item.duration }&nbsp;мин"
+          - if item.small
+            %small>= "#{item.small}"
+  - if drop_shadow
+    = partial('partials/chunks/drop-shadow')

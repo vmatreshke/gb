@@ -1,0 +1,34 @@
+---
+title: "Сертификат"
+sitemap: "(для гостя)"
+sitemap_category: "Сертификат"
+---
+
+.l-container
+  %table.l-triplet
+    %colgroup
+      %col.l-triplet-col.l-triplet-col-1
+      %col.l-triplet-col.l-triplet-col-1-2
+      %col.l-triplet-col.l-triplet-col-2
+      %col.l-triplet-col.l-triplet-col-2-3
+      %col.l-triplet-col.l-triplet-col-3
+    %tr
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        .l-header
+          %a.button.button-white.button-prev.pull-left{href: 'courses'} Все курсы
+          .headline.headline-small.hide-text.pull-left Высшей Школы Главбуха
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        = partial('partials/certificate', locals: {nail: true, gold: true, single: true})
+        %p.text-center{style: 'margin-bottom: 38px'} Ольга Иванова получила этот сертификат в Высшей Школе Главбуха
+        .text-center
+          %a.button.button-yellow.button-xlarge{href: 'promo'} Узнать все о школе...
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        = partial('partials/footer')

@@ -1,0 +1,77 @@
+.courses {}
+
+.courses-item {
+  @extend .clearfix;
+  padding: 13px 5.5%;
+
+  &:first-child {
+    padding-top: 20px;
+  }
+
+  // :last-child doesn't work in IE8
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  &:hover {
+    background: #f0f4fc;
+
+    .section-view-advanced & {
+      background: #e4e8ec;
+    }
+  }
+}
+
+.courses-item-body {
+  float: left;
+  width: 80%;
+
+  .courses-item.is-unavailable & {
+    color: #666;
+  }
+}
+
+.courses-item-title {
+  @include font-height(18px, 20px);
+  margin-bottom: 6px;
+
+  .icon.pull-left {
+    margin-left: -20px;
+    margin-top: -1px;
+  }
+}
+
+.courses-item-description {
+  .icon-pointer.pull-left {
+    margin-top: -5px;
+    margin-left: -18px;
+  }
+}
+
+.courses-item-aside {
+  float: right;
+  font-size: 12px;
+  padding-top: 4px;
+  width: 64px;
+
+  .button {
+    @include box-sizing(content-box);
+    display: block;
+    height: 15px;
+    margin: -4px -12px 0;
+    width: 100%;
+  }
+}
+
+.courses-divider {
+  margin: 17px 0 5px;
+  padding: 0 5.5%;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.courses-update {
+  color: #2b73d5;
+}

@@ -1,0 +1,151 @@
+.button-beuge {
+  border-color: #E3E0D8;
+  color: #000;
+
+  &:hover {
+    @include linear-gradient(#fffffa, #f5f5f0);
+  }
+
+  &:active {
+    @include linear-gradient(#fafaf6, #e7e7e7);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#FEFEFA, #EFEFEC);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+}
+
+.button-azure {
+  border-color: #a7c8d3;
+  color: #000;
+
+  &:hover {
+    @include linear-gradient(#e9f0f3, #d4dee2);
+  }
+
+  &:active {
+    @include linear-gradient(#d9e3e8, #cad6da);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#dde8ed, #cedade);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+}
+
+.button-blue {
+  border-color: #0251d9;
+  color: #FFF;
+
+  &:hover {
+    @include linear-gradient(#4a8ce7, #3d73e1);
+  }
+
+  &:active {
+    @include linear-gradient(#4a8de6, #3667cf);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#4489e6, #366ce0);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+}
+
+.formatted a.button-blue,
+.formatted a.button-blue:hover {
+  color: #FFF !important;
+  border: none !important;
+}
+
+.button-orange {
+  border-color: #D24E00;
+  color: #FFF;
+  text-shadow: 0 -1px rgba(#800, 0.4);
+
+  &:hover {
+    @include linear-gradient(#fd9600, #fb7a00);
+  }
+
+  &:active {
+    @include linear-gradient(#ec8a00, #e07100);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#F39000, #F07300);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+
+  > .pull-right {
+    color: #fae998;
+  }
+}
+
+.button-white {
+  border-color: #e8e8e8;
+  color: #000;
+
+  &:hover {
+    @include linear-gradient(#FFF, #fafafa);
+  }
+
+  &:active {
+    @include linear-gradient(#fafafa, #ededed);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#FFF, #f0f0f0);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+}
+
+.button-yellow {
+  border-color: #e39346;
+  color: #000;
+  text-shadow: 0 1px rgba(#FFF, 0.5);
+
+  &:hover {
+    @include linear-gradient(#ffe472, #ffc429);
+  }
+
+  &:active {
+    @include linear-gradient(#ffdf59, #ffbd10);
+    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  &,
+  &[disabled],
+  &.is-disabled {
+    @include linear-gradient(#ffd055, #ffc843);
+    box-shadow: 0 1px rgba(#FFF, 0.5);
+  }
+
+  &.button-xlarge,
+  &.button-xxlarge,
+  &.button-xxxlarge {
+    &:active {
+      box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+    }
+    &,
+    &[disabled],
+    &.is-disabled {
+      box-shadow: 0 5px 5px -5px #a27f47;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+.headline {
+  display: inline-block;
+}
+
+.headline-small,
+.headline-medium {
+  background: sprite-url($sprite-main);
+}
+
+.headline-small {
+  @include sprite-dimensions($sprite-main, headline-small);
+  background-position: sprite-position($sprite-main, headline-small);
+}
+
+.headline-medium {
+  @include sprite-dimensions($sprite-main, headline-medium);
+  background-position: sprite-position($sprite-main, headline-medium);
+}
+
+.headline-large,
+.headline-promo {
+  background: sprite-url($sprite-promo);
+}
+
+.headline-large {
+  @include sprite-dimensions($sprite-promo, headline-large);
+  background-position: sprite-position($sprite-promo, headline-large);
+}
+
+.headline-promo {
+  @include sprite-dimensions($sprite-promo, headline-promo);
+  background-position: sprite-position($sprite-promo, headline-promo);
+}

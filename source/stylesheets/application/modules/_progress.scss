@@ -1,0 +1,105 @@
+.progress {
+  @include font-height(13px, 1);
+  margin-top: 11px;
+  position: relative;
+}
+
+.progress-main {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-inner {
+  margin-right: 68px;
+  position: relative;
+}
+
+.progress-bar {
+  @include size(100% 12px);
+  background: #e6e6e6;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 4px #a6a6a6;
+  overflow: hidden;
+  padding-right: 68px;
+  &:after {
+    @include position(absolute, 2px -4px false false);
+    @include size(9px);
+    background: sprite($sprite-main, progress-diamond);
+    content: '';
+  }
+}
+
+.progress-progress {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  &:after {
+    @include size(100%);
+    background: #ec8800;
+    box-shadow: inset 0 1px 4px #aa6200;
+    content: '';
+    display: block;
+    padding-right: 4px;
+  }
+}
+
+.progress-progress-achievement {
+  &:after {
+    background: #ffcd56;
+    box-shadow: inset 0 1px 4px #aa7833;
+    margin-left: -4px;
+    padding-left: 4px;
+  }
+}
+
+.progress-shield {
+  @include position(absolute, -5px false false);
+  background: #ffcd56;
+  border-radius: 2px;
+  box-shadow: 1px 1px #a17675;
+  padding: 1px 6px 1px 3px;
+  text-shadow: 0 1px #ffe6ab;
+  &:after {
+    @include position(absolute, 100% false false 50%);
+    @include size(9px 8px);
+    background: sprite($sprite-main, progress-shield-arrow);
+    content: '';
+    margin-left: -5px;
+  }
+}
+
+.progress-mark {
+  position: absolute;
+}
+
+.progress-mark-check {
+  @include size(9px 8px);
+  background: sprite($sprite-main, progress-mark-check);
+  margin-left: -4.5px;
+  top: 2px;
+}
+
+.progress-mark-line {
+  @include size(1px 12px);
+  margin-left: -1px;
+  top: 0;
+}
+
+.progress-mark-line {
+  @include opacity(0.1);
+  background: #000;
+}
+
+.progress-header {
+  float: right;
+  margin: 0 50px 2px 0;
+  text-align: center;
+  width: 40px;
+}
+
+.progress-footer {
+  font-weight: bold;
+  margin-top: 7px;
+  text-align: center;
+}

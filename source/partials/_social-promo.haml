@@ -1,0 +1,33 @@
+.social
+  .social-button
+    Поделиться
+  .social-button
+    #vk_like
+  .social-button.social-button-odnoklassniki
+    %a.mrc__plugin_uber_like_button{href: '//connect.mail.ru/share', target: '_blank', data: {mrc: {config: "{'ck':'1','cm':'1','st':'2','sz':'20','tp':'ok'}"}}} Нравится
+  .social-button.social-button-gplus
+    .g-plusone{data: {size: 'medium'}}
+  .social-button.social-button-twitter
+    %a.twitter-share-button{href: '//twitter.com/share', data: {lang: 'ru'}} Твитнуть
+  .social-button.social-button-facebook
+    .fb-like{data: {send: 'false', layout: 'button_count', width: 450, font: 'arial', show: {faces: 'false'}}}
+
+- content_for :scripts do
+  / BEGIN Код социалок
+  #fb-root
+  %script{src: '//vk.com/js/api/openapi.js?79'}
+  %script{src: '//cdn.connect.mail.ru/js/loader.js'}
+  %script{src: '//apis.google.com/js/plusone.js'} {lang: 'ru', parsetags: 'explicit'}
+  %script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  :javascript
+    VK.init({apiId: 3459570, onlyWidgets: true});
+    VK.Widgets.Like("vk_like", {type: "button", height: 20});
+    gapi.plusone.go();
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  / END Код социалок

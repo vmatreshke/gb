@@ -1,0 +1,21 @@
+.promo-popover {
+  background: #FFF;
+  border-radius: 5px / 4px;
+  border: 1px solid rgba(#000, 0.08);
+  margin-bottom: 38px;
+  padding: 24px 0 40px;
+  position: relative;
+}
+
+.promo-popover-arrow {
+  @include position(absolute, -16px false false);
+  @include sprite-dimensions($sprite-promo, popover-arrow);
+  background: sprite($sprite-promo, popover-arrow);
+  margin-left: 38px;
+}
+
+.promo-popover-inner {
+  overflow: hidden;
+  padding: 0 40px;
+  text-indent: -0.55em; // @todo hanging-quote
+}

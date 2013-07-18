@@ -1,0 +1,12 @@
+.score {}
+
+.score-bonus {
+  @include font-height(18px, 1);
+  color: #ec8800;
+}
+
+.score-info {
+  @include font-height(11px, 14px);
+  color: #7d7d7d;
+  margin-top: 2px;
+}

@@ -1,0 +1,35 @@
+---
+layout: layout_registration
+title: "Запись в школу"
+sitemap: "Регистрация"
+---
+
+- content_for :triplet_rows do
+  %tr
+    %td.l-triplet-cell
+      %label.form-label{data: {for: 'last_name first_name middle_name'}} Фамилия, имя и&nbsp;отчество для сертификата
+      .frame.frame-wooden
+        %img{src: 'images/static/frame/simple.png', width: 104, height: 74}
+    %td.l-triplet-cell
+      .form-field
+        %input.textbox.textbox-block{type: 'text', name: 'last_name',   id: 'last_name',   data: {validate: 'required'}}
+        %input.textbox.textbox-block{type: 'text', name: 'first_name',  id: 'first_name',  data: {validate: 'required'}}
+        %input.textbox.textbox-block{type: 'text', name: 'middle_name', id: 'middle_name', data: {validate: 'required'}}
+  %tr
+    %td.l-triplet-cell
+      %label.form-label{for: 'email'} Эл.&nbsp;почта для связи
+    %td.l-triplet-cell
+      .form-field
+        %input.textbox.textbox-block{type: 'text', name: 'email', id: 'email', data: {validate: 'required email'}}
+  %tr
+    %td.l-triplet-cell
+    %td.l-triplet-cell
+      .form-actions.clearfix.drop-shadow
+        %button.button.button-blue.button-large{type: 'submit'} Записаться
+        .form-actions-aside
+          и&nbsp;принять
+          %a.link.link-black{href: '#'} правила обучения
+        = partial('partials/chunks/drop-shadow')
+  %tr
+    %td.l-triplet-cell{colspan: 5}
+      = partial('partials/footer')

@@ -1,0 +1,68 @@
+---
+title: "О школе"
+sitemap: "Промо-страница"
+---
+
+.l-container
+
+  .l-header.text-center
+    .clearfix
+      %a.button.button-large.button-white.pull-left{href: 'courses', style: 'margin-left: -15px'} Все курсы
+      .glavbukh{style: 'display: inline-block; margin-left: -55px; margin-bottom: 25px'}
+        .glavbukh-brand{style: 'margin: 3px 5px 0 0'}
+        .glavbukh-affix{style: 'text-align: left; width: 230px'}
+          .asset.asset-university.pull-left{style: 'margin: -7px 10px 0 0'}
+          Совместно
+          %br
+          с Финансовым университетом
+          %br
+          при Правительстве РФ
+    .text-center
+      .headline.headline-promo.hide-text Высшая Школа Главбуха
+
+  = partial 'partials/promo/screen'
+
+  .text-center{style: 'margin: 20px 0 70px'}
+    = partial('partials/social-promo')
+    %a.button.button-yellow.button-xxlarge{href: 'registration', style: 'margin-top: 20px'} Записаться в школу...
+
+.l-container.l-container-thinner
+  = partial 'partials/promo/pentaptych-benefits'
+  %h2 Сертификаты
+  %p Сертификат&nbsp;— именной документ, подтверждающий вашу квалификацию и&nbsp;заверенный Финансовым университетом при Правительстве РФ. Сертификат дает право протестироваться и&nbsp;получить удостоверение о&nbsp;повышении квалификации в&nbsp;Финансовом университете.
+
+= partial 'partials/promo/certificates'
+= partial 'partials/promo/plate'
+
+.l-promo-section.l-promo-section-gray
+  .l-container.l-container-thinner
+    %h2 Ученый совет
+    %p В&nbsp;ученый совет школы помимо создателей «Главбуха» входят главные специалисты по&nbsp;всем темам, затронутым в&nbsp;курсах&nbsp;— налоги, взносы, бухучет, кадровое дело, социальное страхование. Система тестов одобрена ученым советом и&nbsp;рецензирована преподавателями Финансового Университета при Правительстве&nbsp;РФ.
+    = partial 'partials/promo/council'
+
+.l-promo-section
+  .l-container.l-container-thinner
+    %h2 Программа
+    %p Обучение построено на&nbsp;профессиональном тестировании по&nbsp;основным темам: учет имущества, расчеты, финансовый результат, налоги, спецрежимы, взносы, отчетность. К&nbsp;каждой теме есть видеокурсы. Вы&nbsp;проходите тест, выявляете пробел в&nbsp;знаниях, смотрите видеокурс, и&nbsp;снова проходите тест, но&nbsp;уже без ошибок.
+    %p Путь в&nbsp;Школе выглядит так:
+    = partial 'partials/promo/pentaptych-agenda'
+    .text-center{style: 'margin-top: 30px'}
+      %a.button.button-yellow.button-xlarge{href: 'registration', style: 'margin-bottom: 10px'} Записаться в школу...
+      %br
+      %p Это займет меньше минуты, и&nbsp;вы&nbsp;сразу начнете учебу
+
+.l-promo-section.l-promo-section-white
+  .l-container.l-container-thinner
+    %h2 Учебный процесс
+    = partial 'partials/promo/slides'
+
+.l-promo-section
+  .l-container.l-container-thinner
+    %h2 Примеры лекций
+    = partial 'partials/promo/mosaic'
+    %h2 Отзывы выпускников
+    = partial 'partials/promo/stickers'
+    %h2 Вопросы и&nbsp;ответы
+    = partial 'partials/promo/questions'
+    = partial 'partials/promo/epilogue'
+    = partial 'partials/footer'

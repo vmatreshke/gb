@@ -1,0 +1,40 @@
+.certificate {
+  @include position(relative);
+  @include size(6.19em 4.49em);
+  font-size: 100px;
+  margin: 0.4em auto;
+}
+
+.certificate-single {
+  margin-top: 55px;
+}
+
+.certificate-inner,
+.certificate-nail {
+  @include position(absolute, -0.4em false false -0.3em);
+  background-image: image-url('sprite-certificate.png');
+  background-size: cover;
+
+  .lt-ie9 & {
+    @include ms-filter-alpha-image-loader('images/sprite-certificate.png', scale);
+    background: none;
+  }
+}
+
+.certificate-inner,
+.certificate-inner > img {
+  @include size(5.85em 4.11em);
+}
+
+.certificate-inner {
+  clip: rect(0.4em, 6.79em, 5.47em, 0);
+  padding: 0.6em 0.47em 0.76em;
+  > img {
+    display: block;
+  }
+}
+
+.certificate-nail {
+  @include size(6.79em 5.47em);
+  clip: rect(0, 6.79em, 0.4em, 0);
+}

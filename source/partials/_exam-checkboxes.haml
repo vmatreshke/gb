@@ -1,0 +1,12 @@
+%form.exam.drop-shadow{action: 'test-failure', data: {bureaucrat: true}}
+  .exam-inner
+    .exam-aside
+      = partial('partials/elevator', locals: {done: (1..3).to_a})
+    .exam-main
+      = partial('partials/exam/question')
+      %p Выберите все правильные варианты ответа.
+      = partial('partials/choice-checkboxes')
+      .exam-actions
+        .exam-actions-aside еще 5&nbsp;вопросов
+        %button.button.button-blue.button-next{type: 'submit'} Ответить и продолжить
+  = partial('partials/chunks/drop-shadow')

@@ -1,0 +1,17 @@
+- hide_header ||= false
+
+.progress
+  - unless hide_header
+    .progress-header= header
+  .progress-main
+    .progress-inner
+      .progress-bar
+        .progress-progress{style: "width: #{ (footer.to_f / header * 100).round }%"}
+        - if defined? achievement
+          .progress-progress.progress-progress-achievement{style: "width: #{ ((achievement.to_f - footer) / header * 100).round }%"}
+        - marks.each_pair do |left, mark|
+          .progress-mark{class: "progress-mark-#{ mark }", style: "left: #{ (left.to_f / header * 100).round }%"}
+  .progress-footer
+    У вас
+    %span.counter= footer
+    баллов

@@ -1,0 +1,30 @@
+.drop-shadow {
+  position: relative;
+
+  > .b,
+  > .bl,
+  > .br {
+    @include position(absolute, 100% false false);
+  }
+
+  > .b {
+    background: sprite($sprite-repeat-x, drop-shadow-bottom);
+    height: 9px;
+    left: 24px;
+    right: 24px;
+  }
+
+  > .bl {
+    background: sprite($sprite-main, drop-shadow-bottom-left);
+    height: 9px;
+    left: 0;
+    width: 24px;
+  }
+
+  > .br {
+    background: sprite($sprite-main, drop-shadow-bottom-right);
+    height: 9px;
+    right: 0;
+    width: 24px;
+  }
+}

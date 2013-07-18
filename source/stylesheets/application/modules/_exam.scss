@@ -1,0 +1,53 @@
+.exam {
+  margin-bottom: 20px;
+
+  h2 {
+    @include font-height(30px, 40px);
+    font-weight: normal;
+    margin: 0 0 18px;
+  }
+
+  p {
+    margin: 0 0 8px;
+  }
+}
+
+.exam-inner {
+  background: #FFF;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 40px 0 60px;
+}
+
+.exam-aside {
+  float: left;
+  margin-left: 3%;
+  width: 21%;
+}
+
+.exam-main {
+  float: right;
+  margin-right: 6%;
+  width: 70%;
+}
+
+.exam-actions {
+  margin-top: 25px;
+}
+
+.exam-actions-aside {
+  color: #999;
+  float: right;
+  margin-top: 6px;
+}
+
+.exam-lead {
+  @include font-height(18px, 24px);
+  margin: 10px 0 24px !important;
+}
+
+.exam-error {
+  @include font-height(18px, 24px);
+  color: #c6332f;
+  margin: 32px 0 8px !important;
+}

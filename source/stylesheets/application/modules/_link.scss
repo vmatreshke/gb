@@ -1,0 +1,46 @@
+.link {
+  border-style: solid;
+  border-width: 0 0 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link {
+  border-color: #2b73d5;
+  border-color: rgba(#2b73d5, 0.4);
+  color: #2b73d5;
+  text-decoration: none;
+
+  &:hover {
+    border-color: #d4021b !important;
+    border-color: rgba(#d4021b, 0.4) !important;
+    color: #d4021b !important;
+  }
+}
+
+.link-black {
+  border-color: #000;
+  border-color: rgba(#000, 0.2);
+  color: #000;
+}
+
+.link-gray {
+  border-color: #666;
+  border-color: rgba(#666, 0.4);
+  color: #666;
+}
+
+.link-bare {
+  border-width: 0 !important;
+
+  > u {
+    border-color: inherit;
+    border-style: inherit;
+    border-width: 0 0 1px;
+    text-decoration: none;
+  }
+}
+
+.link-dashed {
+  border-style: dashed;
+}

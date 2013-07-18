@@ -1,0 +1,46 @@
+.button-prev,
+.button-next {
+  @extend .button-large;
+  position: relative;
+
+  &:after {
+    @include size(24px 34px);
+    @include position(absolute, -1px false false);
+    background-image: sprite-url($sprite-main);
+    content: '';
+  }
+}
+
+.button-prev {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  padding-left: 7px;
+  padding-right: 16px;
+
+  &:after {
+    left: -18px;
+  }
+}
+
+.button-next {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 16px;
+  padding-right: 7px;
+
+  &:after {
+    right: -18px;
+  }
+}
+
+.button-white.button-prev {
+  &:after        { background-position: sprite-position($sprite-main, button-prev-white) }
+  &:hover:after  { background-position: sprite-position($sprite-main, button-prev-white-hover) }
+  &:active:after { background-position: sprite-position($sprite-main, button-prev-white-active) }
+}
+
+.button-blue.button-next {
+  &:after        { background-position: sprite-position($sprite-main, button-next-blue) }
+  &:hover:after  { background-position: sprite-position($sprite-main, button-next-blue-hover) }
+  &:active:after { background-position: sprite-position($sprite-main, button-next-blue-active) }
+}

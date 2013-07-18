@@ -1,0 +1,14 @@
+.exam.drop-shadow
+  .exam-inner
+    .exam-aside
+      = partial('partials/elevator', locals: {done: (1..3).to_a, has_error: true})
+    .exam-main
+      = partial('partials/exam/question')
+      %p Выберите все правильные варианты ответа.
+      = partial('partials/choice-checkboxes-disabled')
+      %p.exam-error К сожалению, вы ошиблись
+      %p Возможно вы выбрали не все правильные варианты.
+      %p Не расстраивайтесь, просто повторите эту тему. Основание изложено в подп. 8 п. 1 ст. 265 Налогового кодекса РФ. Вопрос освещен подробнее в презентации «Продажа и прочее выбытие».
+      .exam-actions
+        %a.button.button-blue.button-next{href: 'course-page'} Разобраться в теме
+  = partial('partials/chunks/drop-shadow')

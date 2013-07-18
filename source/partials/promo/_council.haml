@@ -1,0 +1,16 @@
+.promo-council
+  - data.council.each_index do |row_index|
+    .promo-council-row.clearfix
+      - data.council[row_index].each_index do |item_index|
+        .promo-council-item
+          .promo-council-aside
+            .promo-council-image{class: (row_index + item_index == 0) ? 'is-active' : nil, style: "background-position: -#{ item_index * 93}px -#{ row_index * 93 }px"}
+            .promo-council-category= data.council[row_index][item_index][:category]
+          .promo-council-main
+            %h3= data.council[row_index][item_index][:title]
+            %p.text-xxsmall= data.council[row_index][item_index][:content]
+          .promo-council-popover.text-large= data.council[row_index][item_index][:popover]
+    - if row_index == 0
+      .promo-popover
+        .promo-popover-arrow{style: 'left: 0%'}
+        .promo-popover-inner= data.council[0][0][:popover]

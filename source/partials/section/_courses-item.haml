@@ -1,0 +1,8 @@
+.courses-item{class: item.no_link || item.pseudo_link ? 'is-unavailable' : nil}
+  .courses-item-body
+    .courses-item-title
+      = partial('partials/section/courses-item-title', locals: {item: item})
+    .courses-item-description
+      = partial('partials/section/courses-item-meta', locals: {item: item})
+  .courses-item-aside
+    = partial('partials/section/courses-item-actions', locals: {item: item})

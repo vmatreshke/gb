@@ -1,0 +1,10 @@
+.exam.drop-shadow
+  .exam-inner
+    .exam-aside
+      = partial('partials/elevator', locals: {done: (1..1036).to_a})
+    .exam-main
+      %h2 Тест сдан!
+      %p.exam-lead Поздравляем, вы&nbsp;правильно ответили на&nbsp;все вопросы и&nbsp;заработали 150&nbsp;баллов. До&nbsp;получения базового сертификата вам осталось 1500&nbsp;баллов. Желаем дальнейших успехов!
+      .exam-actions
+        %a.button.button-blue.button-large{href: 'courses'} Продолжить
+  = partial('partials/chunks/drop-shadow')

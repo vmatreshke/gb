@@ -1,0 +1,28 @@
+.artgorbunov {
+  @extend .clearfix;
+  @include font-height(11px, 14px);
+}
+
+.artgorbunov-logo,
+.artgorbunov-suffix {
+  float: left;
+  vertical-align: top;
+}
+
+.artgorbunov-logo {
+  background: #f5e3b8;
+  margin: 5px 0 0 -9px;
+  padding: 6px 4px 6px 9px;
+  position: relative;
+  &:after {
+    @include position(absolute, 0 false false 100%);
+    border-color: #f4f6f5 #f5e3b8;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    content: '';
+  }
+}
+
+.artgorbunov-suffix {
+  @include position(relative, 34px false false 13px);
+}

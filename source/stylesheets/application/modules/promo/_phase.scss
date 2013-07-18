@@ -1,0 +1,22 @@
+.promo-phase {
+  display: table;
+  width: 100%;
+}
+
+.promo-phase-image,
+.promo-phase-arrow {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.promo-phase-image {
+  width: 1px;
+}
+
+.promo-phase-arrow {
+  padding-left: 15px;
+  text-align: center;
+  .sprite {
+    margin: 0 -20px;
+  }
+}

@@ -1,0 +1,6 @@
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  .lt-ie9 & {
+    @include ms-filter-opacity(round($opacity * 100));
+  }
+}

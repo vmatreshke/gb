@@ -1,0 +1,28 @@
+.l-header {
+  margin: 17px 0 0;
+
+  > .button-prev {
+    margin: 0 0 4px -3px;
+    padding: 8px 11px 8px 3px;
+    > span {
+      position: relative;
+    }
+  }
+
+  > .button-prev {
+    margin-left: -7px;
+  }
+
+  > .headline-small {
+    margin: 10px 0 0 14px;
+  }
+
+  > .headline-medium {
+    margin-top: -6px;
+    margin-bottom: 27px;
+  }
+
+  > h1 {
+    clear: both;
+  }
+}

@@ -1,0 +1,109 @@
+.formatted {
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    @include font-height(24px, 30px);
+    margin: 28px 0 12px;
+  }
+
+  h3,
+  h4 {
+    @include font-height(16px, 20px);
+    font-weight: bold;
+    margin: 24px 0 2px;
+  }
+
+  p {
+    margin: 0 0 8px;
+    & + ul,
+    & + ol {
+      margin-top: -8px;
+    }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0 0 16px;
+    padding-left: 20px;
+    > li {
+      margin: 0 0 8px;
+    }
+  }
+
+  ol {
+    counter-reset: li;
+    > li:before {
+      content: counter(li) ")\a0";
+      counter-increment: li;
+      float: left;
+    }
+  }
+
+  a {
+    @extend .link;
+    &.media {
+      border: none !important;
+    }
+  }
+
+  .button-nano {
+    position: relative;
+    top: -4px;
+  }
+
+  // Чиним кривые теги:
+
+  > dl {
+    > dt {
+      @extend h2;
+      @include font-height(24px, 30px);
+      font-weight: bold;
+      margin: 28px 0 12px;
+    }
+    > dd {
+      margin: 0;
+      > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        > li {
+          margin: 0;
+          > .num.name {
+            @extend h3;
+            @include font-height(14px, 20px);
+            margin: 10px 0 2px;
+          }
+          span[style^="background"] {
+            @extend .inset, .inset-tip;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.formatted-serif {
+  font-family: Georgia, serif;
+  h3 {
+    @include font-height(16px, 22px);
+    margin: 16px 0 8px;
+  }
+}
+
+.formatted-divider {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 24px 0;
+  text-align: center;
+  &:before {
+    content: '* * *';
+  }
+}

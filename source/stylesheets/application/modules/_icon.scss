@@ -1,0 +1,24 @@
+.icon {
+  background: sprite-url($sprite-main);
+  display: inline-block;
+  height: 20px;
+  margin: -16px 0 -3px;
+  vertical-align: baseline;
+}
+
+@each $icon in
+  article,
+  circle,
+  download,
+  lock,
+  lock-light,
+  pointer,
+  pro,
+  restart,
+  semicircle,
+  star {
+  .icon-#{$icon} {
+    background-position: sprite-position($sprite-main, icon-#{$icon});
+    width: image-width(sprite-file($sprite-main, icon-#{$icon}))
+  }
+}

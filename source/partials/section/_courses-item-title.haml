@@ -1,0 +1,12 @@
+- if item.icon
+  %span.pull-left.icon{class: "icon-#{ item.icon }"}
+
+- if item.no_link
+  = item.title
+- elsif item.pseudo_link
+  %span.link.link-gray{data: {toggle: 'modal', href: '#modal-subscribe'}}= item.title
+- else
+  %a.link.link-black{href: 'course-page'}= item.title
+
+- if item.pro
+  %span.icon.icon-pro

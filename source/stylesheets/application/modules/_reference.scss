@@ -1,0 +1,55 @@
+.reference {
+  @include font-height(13px, 18px);
+  margin-bottom: 12px;
+
+  .link {
+    padding-top: 0.2em;
+  }
+
+  b,
+  .link,
+  .icon {
+    margin-right: 6px;
+  }
+
+  small {
+    @extend .text-xxsmall;
+  }
+}
+
+.reference-nav {
+  margin: 0 -10px;
+
+  .link {
+    @extend .link-black;
+  }
+}
+
+.reference-inner {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin-bottom: 8px;
+  }
+
+  .reference-nav & {
+    background: #e8e8e8;
+    border-radius: 3px;
+    overflow: hidden;
+
+    > li {
+      margin: 0;
+      padding: 4px 16px 4px 10px;
+
+      &.is-active {
+        background: #FFF;
+      }
+
+      &:last-child {
+        padding-bottom: 14px;
+      }
+    }
+  }
+}

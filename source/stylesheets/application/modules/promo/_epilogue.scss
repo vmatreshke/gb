@@ -1,0 +1,13 @@
+.epilogue {
+  background: #ebe6ce;
+  margin-top: 70px;
+  padding: 65px;
+
+  &:before {
+    @include sprite-dimensions($sprite-assets, oxford-cap);
+    background: sprite($sprite-assets, oxford-cap);
+    content: '';
+    display: block;
+    margin: auto;
+  }
+}

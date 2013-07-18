@@ -1,0 +1,9 @@
+%ul.menu.clearfix
+  - data.menu.each_index do |index|
+    - if current_page.url[data.menu[index][:url]]
+      %li.is-current<
+        %b= data.menu[index][:title]
+    - else
+      %li<
+        %a.link.link-bare{href: data.menu[index][:url]}<
+          %u= data.menu[index][:title]

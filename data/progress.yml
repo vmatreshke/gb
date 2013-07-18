@@ -1,0 +1,37 @@
+front:
+  footer: 350
+  header: 2000
+  hide_header: true
+  marks:
+    1000: line
+    2000: line
+    3000: line
+
+test:
+  footer: 350
+  header: 2000
+  achievement: 500
+  marks:
+    1000: line
+    2000: line
+    3000: line
+
+test_failed:
+  footer: 350
+  header: 2000
+  marks:
+    1000: line
+    2000: line
+    3000: line
+
+course:
+  footer: 4000
+  header: 5000
+  marks:
+    1000: line
+    1500: check
+    2000: line
+    3000: line
+    4000: line
+    5000: line
+    6000: line

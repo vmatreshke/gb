@@ -1,0 +1,68 @@
+---
+title: "Высшая Школа Главбуха"
+sitemap: "Перечень курсов"
+sitemap_category: "Первая пачка"
+---
+
+.l-container
+  %table.l-triplet
+    %colgroup
+      %col.l-triplet-col.l-triplet-col-1
+      %col.l-triplet-col.l-triplet-col-1-2
+      %col.l-triplet-col.l-triplet-col-2
+      %col.l-triplet-col.l-triplet-col-2-3
+      %col.l-triplet-col.l-triplet-col-3
+    %tr
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+      %td.l-triplet-cell{rowspan: 42}
+      %td.l-triplet-cell
+    %tr
+      %tr
+        %td.l-triplet-cell{colspan: 3}
+          .l-header.pull-left
+            = partial('partials/glavbukh')
+            .headline.headline-medium.hide-text Высшая Школа Главбуха
+            = partial('partials/menu')
+        %td.l-triplet-cell
+          .clearfix
+            .l-stats.clearfix
+              .frame-stack.pull-right
+                .frame.frame-wooden
+                  %a{href: 'certificate'}<
+                    %img{src: 'images/static/frame/simple.png', width: 104, height: 74}
+                .frame.frame-dashed
+                  .frame-label<
+                    %span 5000 баллов
+                  %img{src: 'images/static/frame/gold.png', width: 110, height: 74}
+          = partial 'partials/progress', locals: data.progress.front
+    %tr
+      %td.l-triplet-cell{colspan: 5}
+        = partial('partials/board')
+        = partial('partials/notice')
+        = partial('partials/section', locals: {title: 'Учет имущества', pattern_id: 'a', items_basic: 'courses', items_advanced: 'courses-advanced-2nd-certificate'})
+        = partial('partials/section', locals: {title: 'Расчеты', pattern_id: 'b', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon'})
+        = partial('partials/section', locals: {title: 'Ценообразование в&nbsp;аудите', pattern_id: 'c', items_basic: 'courses', items_advanced: 'courses-advanced-2nd-certificate', active_view: 'advanced'})
+        = partial('partials/section', locals: {title: 'Учет денежных средств на&nbsp;валютных счетах', pattern_id: 'd', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon', active_view: 'advanced', advanced_overlay: true})
+    %td.l-triplet-cell
+      .l-footer
+        Спроектировано и&nbsp;оформлено
+        = partial('partials/artgorbunov')
+    %td.l-triplet-cell{colspan: 3}
+      .l-footer
+        ©&nbsp;ЗАО «Актион-Медиа»
+
+- content_for(:modals) do
+  .modal.drop-shadow{id: 'modal-subscribe'}
+    .modal-header
+      %span.pull-left.icon.icon-lock-light
+      Этот курс доступен только подписчикам
+    .modal-body
+      .modal-body-block
+        %a.button.button-yellow{href: 'register'} Стать подписчиком
+        %p Мы поможем выбрать подходящий вариант подписки и&nbsp;оформить ее&nbsp;прямо на&nbsp;сайте
+      .modal-body-block
+        %a.button.button-white{href: '#'} Я подписчик
+        %p Мы спросим ваш код доступа и&nbsp;откроем все курсы (код есть в&nbsp;журнале)
+    = partial('partials/chunks/drop-shadow')
