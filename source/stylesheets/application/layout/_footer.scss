@@ -2,13 +2,39 @@
   font-size: 11px;
   line-height: 15px;
   margin: 0 0 25px;
+  overflow: hidden;
 
   .pull-left {
     margin-right: -200px;
     width: 200px;
   }
+  .footer__by{
+  	float: left;
+  	margin-right: 14px;
+  	padding-top: 9px;
+  }
 }
-
+.artgorbunov{
+	float: left;
+	&:before,&:after{
+		display: none;
+	}
+}
 .l-footer-tall {
   margin-top: 50px;
+}
+.l-triplet-cell-wide{
+	width: 400px;
+	padding-bottom: 15px;
+}
+
+.footer__action{
+	float: left;
+	margin-left: 160px;
+	padding-top: 9px;
+	a{
+		color: #333;
+		text-decoration: none;
+		border-bottom: 1px solid #9B9D9C;
+	}
 }

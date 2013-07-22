@@ -1,11 +1,14 @@
 .menu {
   @include font-height(13px, 1);
-  font-weight: bold;
+  //font-weight: bold;
   list-style: none;
   margin: -12px 0 35px;
   padding: 0;
   position: relative;
   white-space: nowrap;
+  b{
+    font-weight: normal;
+  }
 
   > li {
     float: left;

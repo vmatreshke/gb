@@ -9,7 +9,7 @@
 }
 
 .section-sidebar {
-  background-color: #888;
+  //background-color: #888;
   color: #FFF;
   float: left;
   margin-bottom: -(99999px - 20px);
@@ -20,7 +20,63 @@
     font-size: 18px;
     line-height: 24px;
     margin: 0 0 12px;
+    color: #000;
+    font-weight: normal;
   }
+}
+.section-sidebar{
+  &:before{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+}
+.section-a{
+  &:before{
+    @include background-image(linear-gradient(#C7DF8F, #67D8B6));
+  }
+}
+.section-b{
+  &:before{
+    @include background-image(linear-gradient(#FFEB94, #FCBA90));
+  }
+}
+.section-c{
+  &:before{
+    @include background-image(linear-gradient(#83E8D1, #91C2ED));
+  }
+}
+.section-d{
+  &:before{
+    @include background-image(linear-gradient(#FFD7A6, #F9959A));
+  }
+}
+.section-e{
+  background: #595959;
+  .section-toggle{
+    display: none;
+  }
+  h2{
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+      padding-top: 5px;
+      i{
+        float: left;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        position: relative;
+        top: -8px;
+        background: url(../images/glavbuh.png) no-repeat 0 0;
+      }
+    }
 }
 
 .section-view {
@@ -44,41 +100,53 @@
 .section-toggle {
   font-size: 0;
   font-weight: bold;
+  font-weight: normal;
   line-height: 16px;
   list-style: none;
   margin: 0;
   padding: 0;
   white-space: nowrap;
+  margin-left: -12px;
 
   > li {
-    background: #262626;
-    background: rgba(#000, 0.15);
-    border: 1px solid rgba(#FFF, 0.5);
+    //background: #262626;
+    //background: rgba(#000, 0.15);
+    border: 1px solid rgba(#FFF, 0);
     cursor: pointer;
     display: inline-block;
     font-size: 12px;
     padding: 6px 12px;
-
+    color: #0048A5;
+    span{
+      border-bottom: 1px dotted #326BA2;
+    }
     &:hover {
-      background: #000;
-      @include background(linear-gradient(rgba(#FFF, 0), rgba(#000, 0.15)));
+      //background: #000;
+      color: #C90006;
+      span{
+        border-color: #C90006;
+      }
+      //@include background(linear-gradient(rgba(#FFF, 0), rgba(#000, 0.15)));
     }
 
     &:active {
-      background: #252525;
-      @include background(linear-gradient(rgba(#fafafa, 0), rgba(#000, 0.15)));
-      box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.5);
+      //background: #252525;
+      //@include background(linear-gradient(rgba(#fafafa, 0), rgba(#000, 0.15)));
+      //box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.5);
     }
 
     &.is-active {
       background: #FFF;
-      box-shadow: inset 1px 2px 3px -1px #6F6F6F;
+      //box-shadow: inset 1px 2px 3px -1px #6F6F6F;
       border: 0;
       color: #222;
       cursor: default;
       padding: (6px + 1px) 12px;
+      span{
+        border-style: none;
+      }
       &:first-child {
-        box-shadow: inset -1px 2px 3px -1px #6F6F6F;
+        //box-shadow: inset -1px 2px 3px -1px #6F6F6F;
       }
     }
 
@@ -95,17 +163,20 @@
 }
 
 .section-overlay {
-  background: url('#');
-  @include position(absolute, 0 0 0 27%);
+  //background: url('#');
+  //@include position(absolute, 0 0 0 27%);
 }
 
 .section-modal {
-  @include rgba-background(#FFF, 0.95);
+//   @include rgba-background(#FFF, 0.95);
   border-radius: 4px;
   font-size: 14px;
+  color: #7c7b79;
+  font-weight: bold;
   line-height: 21px;
-  margin: 55px auto 0;
-  padding: 45px 9% 70px;
-  text-align: center;
-  width: 60%;
+  padding: 22px 5.5% 12px 5.5%;
+//   margin: 55px auto 0;
+//   padding: 45px 9% 70px;
+//   text-align: center;
+//   width: 60%;
 }

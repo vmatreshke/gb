@@ -9,18 +9,21 @@
 
 .section.drop-shadow
   .section-inner
-    .section-sidebar{style: "background-image: url('images/pattern-section-#{ pattern_id }.png')"}
+    .section-sidebar.section-sidebar-{style: "background-image: url('images/pattern-#{ pattern_id }.png')", class: "section-#{ pattern_id }"}
       %h2= title
       .section-toggle
-        %li{class: basic_section_class} Базовый
-        %li{class: advanced_section_class} Углубленный
+        %li{class: basic_section_class} 
+          %span Базовый
+        %li{class: advanced_section_class} 
+          %span Углубленный
     .section-view{class: basic_section_class}
       = partial('partials/section/courses', locals: {items: items_basic})
     .section-view.section-view-advanced{class: advanced_section_class}
-      = partial('partials/section/courses', locals: {items: items_advanced})
       - if advanced_overlay
         .section-overlay
           .section-modal.drop-shadow
             Курсы продвинутого уровня доступны обладателям базового сертификата — вам осталось 1650 баллов.
-            = partial('partials/chunks/drop-shadow')
+            /= partial('partials/chunks/drop-shadow')
+      = partial('partials/section/courses', locals: {items: items_advanced})
+      
   = partial('partials/chunks/drop-shadow')

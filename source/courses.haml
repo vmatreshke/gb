@@ -45,13 +45,15 @@ sitemap_category: "Первая пачка"
         = partial('partials/section', locals: {title: 'Расчеты', pattern_id: 'b', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon'})
         = partial('partials/section', locals: {title: 'Ценообразование в&nbsp;аудите', pattern_id: 'c', items_basic: 'courses', items_advanced: 'courses-advanced-2nd-certificate', active_view: 'advanced'})
         = partial('partials/section', locals: {title: 'Учет денежных средств на&nbsp;валютных счетах', pattern_id: 'd', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon', active_view: 'advanced', advanced_overlay: true})
-    %td.l-triplet-cell
+        = partial('partials/section', locals: {title: '<i></i>Система<br>Главбух', pattern_id: 'e', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon', active_view: 'advanced', advanced_overlay: true})
+    %td.l-triplet-cell.l-triplet-cell-wide{colspan: 5}
       .l-footer
-        Спроектировано и&nbsp;оформлено
+        %span.footer__by 
+          Спроектировано и&nbsp;<br>оформлено
         = partial('partials/artgorbunov')
-    %td.l-triplet-cell{colspan: 3}
-      .l-footer
-        ©&nbsp;ЗАО «Актион-Медиа»
+        .footer__action
+          ©&nbsp;ЗАО «Актион-Медиа»<br>
+          %a.link.link-black{:href => "#"} О школе
 
 - content_for(:modals) do
   .modal.drop-shadow{id: 'modal-subscribe'}

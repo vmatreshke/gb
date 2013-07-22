@@ -12,6 +12,11 @@
     height: 9px;
     left: 24px;
     right: 24px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: url(../images/shadow.png) no-repeat 0 0;
+    @include background-size(100%, 4px);
   }
 
   > .bl {
@@ -19,6 +24,7 @@
     height: 9px;
     left: 0;
     width: 24px;
+    display: none;
   }
 
   > .br {
@@ -26,5 +32,6 @@
     height: 9px;
     right: 0;
     width: 24px;
+    display: none;
   }
 }

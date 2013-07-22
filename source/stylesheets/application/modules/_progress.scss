@@ -99,7 +99,14 @@
 }
 
 .progress-footer {
-  font-weight: bold;
+  font-weight: normal;
   margin-top: 7px;
   text-align: center;
+  a{
+    text-decoration: none;
+    font-weight: normal;
+    color: #000;
+    margin-left: .7em;
+    border-bottom: 1px solid #B4B5B5;
+  }
 }
