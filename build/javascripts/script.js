@@ -1,29 +1,939 @@
-(function(){for(var c,b="assert clear count debug dir dirxml error exception group groupCollapsed groupEnd info log markTimeline profile profileEnd table time timeEnd timeStamp trace warn".split(" "),d=b.length,a=window.console=window.console||{};d--;)c=b[d],a[c]||(a[c]=$.noop)})();
-(function(c){c(document).ready(function(){c("html").removeClass("no-js").addClass("js")});window.app={classes:{},debug:!0,log:function(){app.debug&&console.log.apply(console,Array.prototype.slice.call(arguments,0))},module:function(b){if("function"===typeof b.init)c(document).on("ready",b.init);return b}}})(jQuery);
-(function(c){var b=c.easie(0.6,-0.15,0.73,0.05),d=app.classes.Balloon=function(a){var d=c(a);return{element:d,vanish:function(){var a=d.children(".balloon-body"),g=d.children(".balloon-shadow"),n=parseInt(a.children(".balloon-label").text());a.animate({top:"-="+(a.offset().top+a.height()+200)},6E3,b);g.animate({top:"-="+(g.offset().top+g.height())},6E3,b);a.add(g).promise().done(function(){d.remove()});var h=c(".progress");0<h.size()&&setTimeout(function(){h.data("app:progress").achieve(n)},5500)}}};
-app.module({init:function(){c(".balloon").each(function(){var a=new d(this);c(this).data("app:balloon",a)})}})})(jQuery);
-(function(c){app.module({init:function(){var b=app.classes.Carousel={element:null,settings:null,init:function(d,a){var b=this;this.element=c(d);this.settings=c.extend({duration:500,durationNail:150,easingHide:"easieEaseInOutCubic",easingShow:"easieEaseInOutCubic"},a);this.element.on("click",".certificate.is-clickable",function(){b.showFrame(this)});this.element.on("mouseenter",".certificate.is-clickable",function(){b.hintFrame(this)});this.element.on("mouseleave",".certificate.is-clickable",function(){b.unhintFrame(this)});
-this.showFrame(this.element.find(".certificate").first());return this},hintFrame:function(d){d=c(d);var a=d.index();d.stop().animate({left:0===a?"2%":"98%"})},unhintFrame:function(d){d=c(d);var a=d.index();d.stop().animate({left:0===a?0:"100%"})},showFrame:function(d){var a=this;d=c(d);var b=d.find(".certificate-nail"),e=d.siblings(".certificate"),g=e.find(".certificate-nail"),n=e.index();d.removeClass("is-clickable");d.stop().animate({fontSize:100,left:"50%",opacity:1},this.settings.duration,this.settings.easingShow);
-e.stop().animate({fontSize:32,left:0===n?0:"100%",opacity:0.4},this.settings.duration,this.settings.easingHide);g.fadeOut(0);d.promise().done(function(){b.fadeIn(a.settings.durationNail)});e.add(b).add(g).promise().done(function(){e.addClass("is-clickable")})}};Object.create||(Object.create=function(c){function a(){}a.prototype=c;return new a});Object.create(b).init(".promo-certificates")}})})(jQuery);
-(function(c){app.module({init:function(){var b=function(d){c(d).each(function(){var a=c(this);a.parent(".choice-option").toggleClass("is-checked",a.prop("checked"))})};c(".choice").each(function(){var d,a;d=c(this);a=d.find("input");if("radio"===a.attr("type"))d.on("change","input",function(){b(a)});else d.on("change","input",function(){b(this)});d.on("click",function(){b(a)});b(a)})}})})(jQuery);
-(function(c){app.module({init:function(){c(".promo-council").each(function(){var b=c(this),d=b.find(".promo-council-image"),a=b.find(".promo-popover"),f=a.find(".promo-popover-arrow"),e=a.find(".promo-popover-inner"),g=0;b.on("click",".promo-council-image:not(.is-active)",function(){var b=c(this),h=b.parents(".promo-council-item"),k=h.parents(".promo-council-row"),l=k.siblings(".promo-council-row").andSelf();d.removeClass("is-active");b.addClass("is-active");var j=l.index(k),b=e.height();j!==g&&(g<
-l.size()-1&&c("<div></div>").insertBefore(a).height(b+64).animate({height:1},300,function(){c(this).remove()}),a.insertAfter(k),b=j===g?b:0,g=j);f.animate({left:33.3*h.index()+"%"},300);e.html(h.find(".promo-council-popover").html());h=e.height();e.height(b).animate({height:h},300,function(){c(this).height("auto")})})})}})})(jQuery);
-(function(c){var b=app.classes.Counter=function(d){var a=c(d);d=a.html();var b=parseInt(d,10);a.kCounter({duration:300,height:a.height(),width:Math.round(a.width()/d.length)});return{element:a,getValue:function(){return b},setValue:function(c){a.kCounter("update",c);b=c}}};app.module({init:function(){c(".counter").each(function(){c(this).data("app:counter",new b(this))})}})})(jQuery);
-(function(c){var b=app.classes.Elevator=function(b,a){function f(a,b){var d=a.outerHeight(),e=a.outerWidth(),f=c(document.createElement("li"));f.css({width:e,height:d,position:"relative"});e=[];a.is(":first-child")&&e.push("first-child");a.is(":last-child")&&e.push("last-child");e=e.join(" ");a.clone().addClass(e).appendTo(f);a.removeClass(n).addClass(b);var h=c(document.createElement("div"));h.append(a.clone()).addClass(e).css({position:"absolute",height:0,right:0,left:0,top:0}).appendTo(f);f.insertAfter(a.hide());
-h.animate({height:d},500,function(){f.remove();a.show()})}var e=c.extend({activeClass:"is-active",doneClass:"is-done",errorClass:"is-error",levelSelector:"> ul > li"},a),g=c(b),n=[e.activeClass,e.doneClass,e.errorClass].join(" "),h=g.find(e.levelSelector),k=h.index(h.filter("."+e.activeClass)),l=h.size();return{element:g,fail:function(){var a=c(h.eq(k));a.removeClass(n).addClass(e.errorClass);var b=Math.pow(2,4);a.css("position","relative");for(var d=0;6>d;d++)a.animate({left:b},60*(1-Math.pow(d/
-6,2)),"easieEaseOutSine"),b=Math.floor(b/-2);a.promise().done(function(){a.css({position:"",left:""})})},proceed:function(){k<l&&(f(h.eq(k),e.doneClass),k+1<l&&(f(h.eq(k+1),e.activeClass),k++))}}};app.module({init:function(){c(".elevator").each(function(){c(this).data("app:elevator",new b(this))})}})})(jQuery);
-(function(c){var b=app.classes.Media=function(b){function a(){var a=c(document.createElement("span"));a.addClass(f.attr("class"));var b=c(document.createElement("iframe"));b.attr({allowfullscreen:"allowfullscreen",frameborder:0,height:f.height(),src:"http://www.youtube.com/embed/"+e+"?autoplay=1",width:f.width()});b.appendTo(a);f.replaceWith(a);f=a}var f=c(b);f.children("img");var e=/v=([a-z0-9_-]+)/i.exec(f.prop("search"))[1];b=""===f.data("autoplay");var g=""===f.data("static");b&&a();f.on("click",
-function(c){g||(a(),c.preventDefault())});return{element:f,play:a}};app.module({init:function(){app.Media=b;c(".media").each(function(){new b(this)})}})})(jQuery);
-(function(c){var b=app.classes.ModalContainer=function(b){var a=this;a.element=c(b);a.show=function(c){a.element.find(c).addClass("is-active").siblings().removeClass("is-active");a.element.addClass("is-active")};this.hide=function(){a.element.find(".modal.is-active").removeClass("is-active");a.element.removeClass("is-active")};a.element.on("click.modal",function(){a.hide()});a.element.on("click.modal",".l-modals-inner",function(a){a.stopPropagation()});return this};app.module({init:function(){0<c(".l-modals").size()&&
-(app.modals=new b(".l-modals"),c(document).on("click.modal",'[data-toggle="modal"]',function(){app.modals.show(c(this).data("href"))}))}})})(jQuery);
-(function(c){var b=app.classes.Progress=function(b){var a=c(b),f=a.find(".counter"),e=a.find(".progress-progress").not(".progress-progress-achievement"),g=a.find(".progress-progress-achievement");return{achieve:function(b){if(!(0>=g.size())){var d=parseInt(g.get(0).style.width,10),k=parseInt(e.get(0).style.width,10),l=f.data("app:counter"),j=c(document.createElement("div"));j.addClass("progress-shield");j.text("+"+b);j.appendTo(a);j.css({marginLeft:j.outerWidth()/-2,left:e.width()});e.css({width:k+
-d+"%"});g.css({marginLeft:-d+"%"});j.animate({left:e.width()},300);j.delay(1500);j.fadeOut(300,function(){j.remove()});g.animate({marginLeft:0,width:0},300,function(){g.remove()});l.setValue(parseInt(l.getValue()+b))}},element:a}};app.module({init:function(){c(".progress").each(function(){c(this).data("app:progress",new b(this))})}})})(jQuery);
-(function(c){var b=app.classes.Questions=function(b){function a(a){for(var c=0,b=m.length;c<b;){if(m[c].main>a)return m[c-1].nav+(a-m[c-1].main)*((m[c].nav-m[c-1].nav)/(m[c].main-m[c-1].main));c++}}var f=c(b),e=f.children(".questions-nav"),g=e.children(".questions-caret"),n=c(window),h=e.clone().addClass("invisible").insertBefore(e),k;f.parents().each(function(){var a=c(this);0===a.scrollTop()&&a.scrollTop(1);if(0<a.scrollTop())return k=a,!1});var l,j,p,q,m,r="";this.update=function(b){b&&(l=f.height(),
-j=h.height(),p=f.offset().top,q=l-j,m=[],h.find("a").each(function(){m.push({main:c(this.hash).offset().top-p,nav:c(this).offset().top-p})}),m.push({main:l,nav:j}));b=k.scrollTop()-p;var d=0<b?b>l-j?"bottom":"fixed":"";0<b?b>q?(b=q,d="bottom"):d="fixed":(b=0,d="");d!==r&&(r=d,e.removeClass("questions-nav-bottom questions-nav-fixed"),"fixed"===d?e.addClass("questions-nav-fixed"):(e.removeAttr("style"),"bottom"===d&&e.addClass("questions-nav-bottom")));"fixed"===d&&e.css({left:h.offset().left,width:h.width()});
-d=a(b);b=a(b+n.height())-d;g.css({height:b,top:d})};n.on("scroll",c.proxy(this.update)).on("resize",c.proxy(this.update,this,!0));e.on("click","a",function(a){k.animate({scrollTop:c(a.target.hash).offset().top},150);a.preventDefault()});this.update(!0)};app.module({init:function(){c(".questions").each(function(){new b(this)})}})})(jQuery);
-(function(c){app.module({init:function(){c(".promo-screen").each(function(){var b=c(this),d=b.children(".promo-screen-nav"),a=b.find(".promo-screen-main"),b=b.find(".media.media-large"),f=b.height(),e=b.width();d.on("click",".media",function(b){c(this).parents(".promo-screen-item").addClass("is-active").siblings().removeClass("is-active");var d=c(document.createElement("a"));d.addClass("media media-large");d.attr({href:c(this).attr("href")});d.css({width:e,height:f});a.empty().append(d);mediaObject=
-new app.Media(d);mediaObject.play();b.preventDefault()})})}})})(jQuery);
-(function(c){var b=app.classes.Section=function(b){var a=this;a.element=c(b);var f=a.element.find(".section-toggle > li"),e=a.element.find(".section-view"),g=a.element.find(".section-inner");a.stateIndex=f.index(f.filter(".is-active"));a.toggle=function(b){if(a.stateIndex!==b){f.removeClass("is-active").eq(b).addClass("is-active");var c=e.eq(a.stateIndex),d=e.eq(b),l=c.height();g.height(l);c.removeClass("is-active");d.addClass("is-active");c=d.height();g.animate({height:c},300);a.stateIndex=b}};a.element.on("click.section",
-".section-toggle > li",function(){a.toggle(c(this).index())});return a};app.module({init:function(){app.sections=[];c(".section").each(function(){c(this).data("app:section",new b(this))})}})})(jQuery);
-(function(c){app.module({init:function(){c(".promo-slides").each(function(){var b=c(this),d=b.children(".promo-slides-nav"),a=b.children(".promo-slides-main").children(".promo-slides-pane");d.on("click","li",function(){var b=c(this);b.addClass("is-active").siblings().removeClass("is-active");b=b.index();a.removeClass("is-active").eq(b).addClass("is-active")})})}})})(jQuery);
-(function(c){app.module({init:function(){c("[data-bureaucrat]").each(function(){var b=c(this),d=b.find("[type=submit]");b.on("b:complete b:invalid",function(a){a="b:invalid"===a.type;d.toggleClass("is-disabled",a);d.prop("disabled",a)}).on("b:valid b:invalid","[data-validate*=email]",function(a){c(this).toggleClass("has-error","b:invalid"===a.type)}).on("b:change",function(){b.bureaucrat("validate")}).bureaucrat().bureaucrat("validate")})}})})(jQuery);
+(function() {
+
+    'use strict';
+
+    var method;
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed',
+        'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp',
+        'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+        if (!console[method]) {
+            console[method] = $.noop;
+        }
+    }
+}());
+(function ($) {
+
+    'use strict';
+
+    $(document).ready(function () {
+        $('html').removeClass('no-js').addClass('js');
+    });
+
+    window.app = {
+
+        classes: {},
+
+        debug: true,
+
+        log: function () {
+          if (app.debug) {
+            console.log.apply(console, Array.prototype.slice.call(arguments, 0));
+          }
+        },
+
+        module: function (module) {
+            if (typeof module.init === 'function') {
+                $(document).on('ready', module.init);
+            }
+            return module;
+        }
+    };
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var easing = $.easie(0.6, -0.15, 0.73, 0.05);
+
+    var Balloon = app.classes.Balloon = function (selector) {
+
+        var element = $(selector);
+
+        function vanish() {
+            var body = element.children('.balloon-body');
+            var shadow = element.children('.balloon-shadow');
+            var achievementValue = parseInt(body.children('.balloon-label').text());
+
+            body.animate({
+                top:  '-=' + (body.offset().top + body.height() + 200)
+            }, 6000, easing);
+
+            shadow.animate({
+                top:  '-=' + (shadow.offset().top + shadow.height())
+            }, 6000, easing);
+
+            body.add(shadow).promise().done(function () {
+                element.remove();
+            });
+
+            var progress = $('.progress');
+            if (progress.size() > 0) {
+                setTimeout(function () {
+                    progress.data('app:progress').achieve(achievementValue);
+                }, 5500);
+            }
+        }
+
+        return {
+            element: element,
+            vanish: vanish
+        };
+    };
+
+    app.module({
+        init: function () {
+            $('.balloon').each(function () {
+                var balloon = new Balloon(this);
+                $(this).data('app:balloon', balloon);
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    app.module({
+        init: function () {
+
+            var Carousel = app.classes.Carousel = {
+
+                element: null,
+                settings: null,
+
+                init: function (selector, options) {
+
+                    var that = this;
+                    this.element = $(selector);
+                    this.settings = $.extend({
+                        duration: 500,
+                        durationNail: 150,
+                        easingHide: 'easieEaseInOutCubic',
+                        easingShow: 'easieEaseInOutCubic'
+                    }, options);
+
+                    this.element.on('click', '.certificate.is-clickable', function () {
+                        that.showFrame(this);
+                    });
+
+                    this.element.on('mouseenter', '.certificate.is-clickable', function () {
+                        that.hintFrame(this);
+                    });
+
+                    this.element.on('mouseleave', '.certificate.is-clickable', function () {
+                        that.unhintFrame(this);
+                    });
+
+                    this.showFrame(this.element.find('.certificate').first());
+
+                    return this;
+                },
+
+                hintFrame: function (selector) {
+                    var frame = $(selector);
+                    var frameIndex = frame.index();
+                    frame.stop().animate({
+                        left: frameIndex === 0 ? '2%' : '98%'
+                    });
+                },
+
+                unhintFrame: function (selector) {
+                    var frame = $(selector);
+                    var frameIndex = frame.index();
+                    frame.stop().animate({
+                        left: frameIndex === 0 ? 0 : '100%'
+                    });
+                },
+
+                showFrame: function (selector) {
+
+                    var that = this;
+
+                    var frame = $(selector);
+                    var frameNail = frame.find('.certificate-nail');
+                    var frameOther = frame.siblings('.certificate');
+                    var frameOtherNail = frameOther.find('.certificate-nail');
+                    var frameOtherIndex = frameOther.index();
+
+                    frame.removeClass('is-clickable');
+                    frame.stop().animate({
+                        fontSize: 100,
+                        left: '50%',
+                        opacity: 1
+                    }, this.settings.duration, this.settings.easingShow);
+
+                    frameOther.stop().animate({
+                        fontSize: 32,
+                        left: frameOtherIndex === 0 ? 0 : '100%',
+                        opacity: 0.4
+                    }, this.settings.duration, this.settings.easingHide);
+                    frameOtherNail.fadeOut(0);
+
+                    frame.promise().done(function () {
+                        frameNail.fadeIn(that.settings.durationNail);
+                    });
+
+                    frameOther.add(frameNail).add(frameOtherNail).promise().done(function () {
+                        frameOther.addClass('is-clickable');
+                    });
+                }
+            };
+
+            if (!Object.create) {
+                Object.create = function (prototype) {
+                    function Type() {}
+                    Type.prototype = prototype;
+                    return new Type();
+                };
+            }
+
+            Object.create(Carousel).init('.promo-certificates');
+
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    app.module({
+        init: function () {
+
+          var initChoice = function (selector) {
+
+            function updateInputs(selector) {
+              $(selector).each(function () {
+                var $this = $(this);
+                $this.parent('.choice-option').toggleClass('is-checked', $this.prop('checked'));
+              });
+            }
+
+            $(selector).each(function () {
+              var $container, $inputs;
+              $container = $(this);
+              $inputs = $container.find('input');
+
+              if ($inputs.attr('type') === 'radio') {
+                $container.on('change', 'input', function () {
+                  updateInputs($inputs);
+                });
+              } else {
+                $container.on('change', 'input', function () {
+                  updateInputs(this);
+                });
+              }
+              $container.on('click', function () {
+                updateInputs($inputs);
+              });
+
+              updateInputs($inputs);
+            });
+          };
+
+          initChoice('.choice');
+
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    app.module({
+        init: function () {
+
+          $('.promo-council').each(function () {
+            var showcase = $(this);
+            var images = showcase.find('.promo-council-image');
+
+            var popover = showcase.find('.promo-popover');
+            var popoverArrow = popover.find('.promo-popover-arrow');
+            var popoverContent = popover.find('.promo-popover-inner');
+
+            var currentRowIndex = 0;
+
+            showcase.on('click', '.promo-council-image:not(.is-active)', function () {
+              var image = $(this);
+              var item = image.parents('.promo-council-item');
+              var row  = item.parents('.promo-council-row');
+              var rows = row.siblings('.promo-council-row').andSelf();
+
+              images.removeClass('is-active');
+              image.addClass('is-active');
+
+              var rowIndex = rows.index(row);
+              var height = popoverContent.height();
+              if (rowIndex !== currentRowIndex) {
+                if (currentRowIndex < rows.size() - 1) {
+                  var placeholder = $('<div></div>');
+                  placeholder.insertBefore(popover).height(height + 64).animate({
+                    height: 1
+                  }, 300, function () {
+                    $(this).remove();
+                  });
+                }
+                popover.insertAfter(row);
+                height = (rowIndex === currentRowIndex) ? height : 0;
+                currentRowIndex = rowIndex;
+              }
+
+              popoverArrow.animate({
+                left: 33.3 * item.index() + '%'
+              }, 300);
+
+              popoverContent.html(item.find('.promo-council-popover').html());
+              var newHeight = popoverContent.height();
+              popoverContent.height(height).animate({
+                height: newHeight
+              }, 300, function () {
+                $(this).height('auto');
+              });
+
+            });
+          });
+
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Counter = app.classes.Counter = function (selector) {
+
+        var element = $(selector);
+        var html = element.html();
+
+        var value = parseInt(html, 10);
+
+        element.kCounter({
+            duration: 300,
+            height: element.height(),
+            width:  Math.round (element.width() / html.length)
+        });
+
+        function getValue() {
+            return value;
+        }
+
+        function setValue(newValue) {
+            element.kCounter('update', newValue);
+            value = newValue;
+        };
+
+        return {
+            element: element,
+            getValue: getValue,
+            setValue: setValue
+        };
+
+    };
+
+    app.module({
+        init: function () {
+            $('.counter').each(function () {
+                $(this).data('app:counter', new Counter(this));
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Elevator = app.classes.Elevator = function (selector, options) {
+
+        var o = $.extend({
+            activeClass: 'is-active',
+            doneClass:   'is-done',
+            errorClass:  'is-error',
+            levelSelector: '> ul > li'
+        }, options);
+
+        var element = $(selector);
+
+        var stateClasses = [o.activeClass, o.doneClass, o.errorClass].join(' ');
+
+        var levels = element.find(o.levelSelector);
+        var levelIndex = levels.index(levels.filter('.' + o.activeClass));
+        var levelCount = levels.size();
+
+        function animateClass(element, newStateClass) {
+            var elementHeight = element.outerHeight();
+            var elementWidth  = element.outerWidth();
+
+            var stage = $(document.createElement('li'));
+            stage.css({
+                width: elementWidth,
+                height: elementHeight,
+                position: 'relative'
+            });
+
+            var orderClasses = [];
+            if (element.is(':first-child')) orderClasses.push('first-child');
+            if (element.is(':last-child'))  orderClasses.push('last-child');
+            orderClasses = orderClasses.join(' ');
+
+            var prevState = element.clone().addClass(orderClasses);
+            prevState.appendTo(stage);
+
+            element.removeClass(stateClasses).addClass(newStateClass);
+
+            var nextState = $(document.createElement('div'));
+            nextState.append(element.clone()).addClass(orderClasses).css({
+                position: 'absolute',
+                height: 0,
+                right: 0,
+                left: 0,
+                top: 0
+            }).appendTo(stage);
+
+            stage.insertAfter(element.hide());
+            nextState.animate({
+                height: elementHeight
+            }, 500, function () {
+                stage.remove();
+                element.show();
+            });
+        }
+
+        function animateBounce(element, bounces, speed) {
+            var distance = Math.pow(2, bounces - 2);
+            element.css('position', 'relative');
+
+            for (var i = 0; i < bounces; i++) {
+                element.animate({
+                    left: distance
+                }, speed * (1 - Math.pow(i / bounces, 2)), 'easieEaseOutSine');
+                distance = Math.floor(distance / -2);
+            }
+
+            element.promise().done(function () {
+                element.css({
+                    position: '',
+                    left: ''
+                });
+            });
+        }
+
+        function fail() {
+            var element = $(levels.eq(levelIndex));
+            element.removeClass(stateClasses).addClass(o.errorClass);
+            animateBounce(element, 6, 60);
+        }
+
+        function proceed() {
+            if (levelIndex < levelCount) {
+                animateClass(levels.eq(levelIndex), o.doneClass);
+                if (levelIndex + 1 < levelCount) {
+                    animateClass(levels.eq(levelIndex + 1), o.activeClass);
+                    levelIndex++;
+                }
+            }
+        }
+
+        return {
+            element: element,
+            fail: fail,
+            proceed: proceed
+        };
+    };
+
+    app.module({
+        init: function () {
+            $('.elevator').each(function () {
+                $(this).data('app:elevator', new Elevator(this));
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Media = app.classes.Media = function (selector) {
+
+        var _element   = $(selector);
+        var _thumbnail = _element.children('img');
+
+        var _id = /v=([a-z0-9_-]+)/i.exec(_element.prop('search'))[1];
+
+        var _autoplay = (_element.data('autoplay') === '');
+        var _static   = (_element.data('static') === '');
+
+        function _play() {
+            var element = $(document.createElement('span'));
+            element.addClass(_element.attr('class'));
+
+            var iframe = $(document.createElement('iframe'));
+            iframe.attr({
+                allowfullscreen: 'allowfullscreen',
+                frameborder: 0,
+                height: _element.height(),
+                src: 'http://www.youtube.com/embed/' + _id + '?autoplay=1',
+                width: _element.width()
+            });
+            iframe.appendTo(element);
+
+            _element.replaceWith(element);
+            _element = element;
+        }
+
+        if (_autoplay) {
+            _play();
+        }
+
+        _element.on('click', function (event) {
+            if (_static) return;
+            _play();
+            event.preventDefault();
+        });
+
+
+        return {
+            element: _element,
+            play: _play
+        };
+    };
+
+    app.module({
+        init: function () {
+            app.Media = Media;
+            $('.media').each(function () {
+                new Media(this);
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var ModalContainer = app.classes.ModalContainer = function (selector) {
+
+        var _self = this;
+
+        _self.element = $(selector);
+
+        _self.show = function (selector) {
+            var modal = _self.element.find(selector);
+            modal.addClass('is-active').siblings().removeClass('is-active');
+            _self.element.addClass('is-active');
+        };
+
+        this.hide = function () {
+            _self.element.find('.modal.is-active').removeClass('is-active');
+            _self.element.removeClass('is-active');
+        };
+
+        _self.element.on('click.modal', function () {
+            _self.hide();
+        });
+        _self.element.on('click.modal', '.l-modals-inner', function (event) {
+            event.stopPropagation();
+        });
+
+        return this;
+
+    };
+
+    app.module({
+        init: function () {
+            if ($('.l-modals').size() > 0) {
+                app.modals = new ModalContainer('.l-modals');
+                $(document).on('click.modal', '[data-toggle="modal"]', function () {
+                    app.modals.show($(this).data('href'));
+                });
+            }
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Progress = app.classes.Progress = function (selector) {
+
+        var element = $(selector);
+        var counter = element.find('.counter');
+        var progress = element.find('.progress-progress').not('.progress-progress-achievement');
+        var achievement = element.find('.progress-progress-achievement');
+
+        function achieve(value) {
+            if (achievement.size() <= 0) return;
+
+            var achievementWidth = parseInt(achievement.get(0).style.width, 10);
+            var progressWidth = parseInt(progress.get(0).style.width, 10);
+            var counterApi = counter.data('app:counter');
+
+            var shield = $(document.createElement('div'));
+            shield.addClass('progress-shield');
+            shield.text('+' + value);
+            shield.appendTo(element);
+            shield.css({
+                marginLeft: shield.outerWidth() / -2,
+                left: progress.width()
+            });
+
+            progress.css({
+                width: progressWidth + achievementWidth + '%'
+            });
+
+            achievement.css({
+                marginLeft: -achievementWidth + '%'
+            });
+
+            shield.animate({
+                left: progress.width()
+            }, 300);
+            shield.delay(1500);
+            shield.fadeOut(300, function () {
+                shield.remove();
+            });
+
+            achievement.animate({
+                marginLeft: 0,
+                width: 0
+            }, 300, function () {
+                achievement.remove();
+            });
+
+            counterApi.setValue(parseInt(counterApi.getValue() + value));
+        }
+
+        return {
+            achieve: achieve,
+            element: element
+        }
+    };
+
+    app.module({
+        init: function () {
+            $('.progress').each(function () {
+                $(this).data('app:progress', new Progress(this));
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Questions = app.classes.Questions = function (selector) {
+
+        var _element  = $(selector);
+        var _nav      = _element.children('.questions-nav');
+        var _caret    = _nav.children('.questions-caret');
+
+        var _window   = $(window);
+        var _navClone = _nav.clone().addClass('invisible').insertBefore(_nav);
+
+        //
+        // Находим первого прокручивающегося родителя
+        //
+
+        var _scrollable;
+
+        _element.parents().each(function () {
+            var element = $(this);
+            if (element.scrollTop() === 0) {
+                element.scrollTop(1);
+            }
+            if (element.scrollTop() > 0) {
+                _scrollable = element;
+                return false;
+            }
+        });
+
+        //
+        // Метод _updateDimensions
+        //
+
+        var _elementHeight, _navHeight;
+        var _offset, _offsetScrollMax;
+        var _map;
+
+        function _updateDimensions() {
+            _elementHeight = _element.height();
+            _navHeight = _navClone.height();
+            _offset = _element.offset().top;
+            _offsetScrollMax = _elementHeight - _navHeight;
+            _map = [];
+            _navClone.find('a').each(function () {
+                _map.push({
+                    main: $(this.hash).offset().top - _offset,
+                    nav:  $(this).offset().top - _offset
+                });
+            });
+            _map.push({
+                main: _elementHeight,
+                nav: _navHeight
+            });
+        }
+
+        //
+        // Метод _mapOffset
+        //
+
+        function _mapOffset(offset) {
+            var i = 0;
+            var length = _map.length;
+            while (i < length) {
+                if (_map[i].main > offset) {
+                    var scale = (_map[i].nav - _map[i - 1].nav) / (_map[i].main - _map[i - 1].main);
+                    return _map[i - 1].nav + (offset - _map[i - 1].main) * scale;
+                }
+                i++;
+            }
+        }
+
+        //
+        // Метод _updateOffsets
+        //
+
+        var _position = '';
+
+        function _updateOffsets() {
+            var offsetScroll = _scrollable.scrollTop() - _offset;
+            var position = (offsetScroll > 0) ? (offsetScroll > _elementHeight - _navHeight) ? 'bottom' : 'fixed' : '';
+
+            if (offsetScroll > 0) {
+                if (offsetScroll > _offsetScrollMax) {
+                    offsetScroll = _offsetScrollMax;
+                    position = 'bottom';
+                } else {
+                    position = 'fixed';
+                }
+            } else {
+                offsetScroll = 0;
+                position = '';
+            }
+
+            if (position !== _position) {
+                _position = position;
+                _nav.removeClass('questions-nav-bottom questions-nav-fixed');
+                if (position === 'fixed') {
+                    _nav.addClass('questions-nav-fixed');
+                } else {
+                    _nav.removeAttr('style');
+                    if (position === 'bottom') {
+                        _nav.addClass('questions-nav-bottom');
+                    }
+                }
+            }
+
+            if (position === 'fixed') {
+                _nav.css({
+                    left: _navClone.offset().left,
+                    width: _navClone.width()
+                });
+            }
+
+            var caretTop = _mapOffset(offsetScroll);
+            var caretHeight = _mapOffset(offsetScroll + _window.height()) - caretTop;
+            _caret.css({
+                height: caretHeight,
+                top: caretTop
+            });
+        }
+
+        //
+        // Метод this.update
+        //
+
+        this.update = function (updateDimensions) {
+            if (updateDimensions) {
+                _updateDimensions();
+            }
+            _updateOffsets();
+        };
+
+        //
+        // Вешаем обработчики событий -- и мы молодцы
+        //
+
+        _window
+            .on('scroll', $.proxy(this.update))
+            .on('resize', $.proxy(this.update, this, true));
+
+        _nav.on('click', 'a', function (event) {
+            _scrollable.animate({
+                scrollTop: $(event.target.hash).offset().top
+            }, 150);
+            event.preventDefault();
+        });
+
+        this.update(true);
+    };
+
+    app.module({
+        init: function () {
+            $('.questions').each(function () {
+                new Questions(this);
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    app.module({
+        init: function () {
+
+      $('.promo-screen').each(function () {
+        var screen = $(this);
+        var nav = screen.children('.promo-screen-nav');
+        var main = screen.find('.promo-screen-main');
+        var mediaLarge = screen.find('.media.media-large');
+        var height = mediaLarge.height();
+        var width = mediaLarge.width();
+
+        function update(target) {
+
+            var media = $(document.createElement('a'));
+            media.addClass('media media-large');
+            media.attr({
+              href: $(target).attr('href')
+            });
+            media.css({
+              width: width,
+              height: height
+            });
+            main.empty().append(media);
+            mediaObject = new app.Media(media);
+            mediaObject.play();
+
+        }
+
+        nav.on('click', '.media', function (event) {
+          $(this).parents('.promo-screen-item').addClass('is-active').siblings().removeClass('is-active');
+          update(this);
+          event.preventDefault();
+        });
+      });
+
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    var Section = app.classes.Section = function (selector) {
+
+        var _self = this;
+
+        _self.element = $(selector);
+        var _toggles = _self.element.find('.section-toggle > li');
+        var _views   = _self.element.find('.section-view');
+        var _wrap    = _self.element.find('.section-inner');
+
+        _self.stateIndex = _toggles.index(_toggles.filter('.is-active'));
+
+        _self.toggle = function (nextStateIndex) {
+            if (_self.stateIndex !== nextStateIndex) {
+
+                _toggles.removeClass('is-active').eq(nextStateIndex).addClass('is-active');
+
+                var viewPrev = _views.eq(_self.stateIndex);
+                var viewNext = _views.eq(nextStateIndex);
+
+                var heightPrev = viewPrev.height();
+                _wrap.height(heightPrev);
+
+                viewPrev.removeClass('is-active');
+                viewNext.addClass('is-active');
+
+                var heightNext = viewNext.height();
+                _wrap.animate({
+                    height: heightNext
+                }, 300);
+
+                _self.stateIndex = nextStateIndex;
+            }
+        };
+
+        _self.element.on('click.section', '.section-toggle > li', function () {
+            _self.toggle($(this).index());
+        });
+
+        return _self;
+
+    };
+
+    app.module({
+        init: function () {
+            app.sections = [];
+            $('.section').each(function () {
+                $(this).data('app:section', new Section(this));
+            });
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    app.module({
+        init: function () {
+
+        $('.promo-slides').each(function () {
+          var slides = $(this);
+          var nav = slides.children('.promo-slides-nav');
+          var panes = slides.children('.promo-slides-main').children('.promo-slides-pane');
+          nav.on('click', 'li', function () {
+            var target = $(this);
+            target.addClass('is-active').siblings().removeClass('is-active');
+            var index = target.index();
+            panes.removeClass('is-active').eq(index).addClass('is-active');
+          });
+        });
+
+        }
+    });
+
+}(jQuery));
+(function ($) {
+
+    'use strict';
+
+    app.module({
+        init: function () {
+            $('[data-bureaucrat]').each(function () {
+                var form = $(this);
+                var submit = form.find('[type=submit]');
+                form
+                    .on('b:complete b:invalid', function (event) {
+                        var disabled = (event.type === 'b:invalid')
+                        submit.toggleClass('is-disabled', disabled);
+                        submit.prop('disabled', disabled);
+                    })
+                    .on('b:valid b:invalid', '[data-validate*=email]', function (event) {
+                        $(this).toggleClass('has-error', event.type === 'b:invalid');
+                    })
+                    .on('b:change', function () {
+                        form.bureaucrat('validate');
+                    })
+                    .bureaucrat()
+                    .bureaucrat('validate');
+            });
+        }
+    });
+
+}(jQuery));
+
+
+

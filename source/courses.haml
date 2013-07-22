@@ -39,8 +39,8 @@ sitemap_category: "Первая пачка"
           = partial 'partials/progress', locals: data.progress.front
     %tr
       %td.l-triplet-cell{colspan: 5}
-        = partial('partials/board')
         = partial('partials/notice')
+        = partial('partials/board')
         = partial('partials/section', locals: {title: 'Учет имущества', pattern_id: 'a', items_basic: 'courses', items_advanced: 'courses-advanced-2nd-certificate'})
         = partial('partials/section', locals: {title: 'Расчеты', pattern_id: 'b', items_basic: 'courses-subscriber', items_advanced: 'courses-advanced-soon'})
         = partial('partials/section', locals: {title: 'Ценообразование в&nbsp;аудите', pattern_id: 'c', items_basic: 'courses', items_advanced: 'courses-advanced-2nd-certificate', active_view: 'advanced'})

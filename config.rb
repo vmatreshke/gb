@@ -8,10 +8,10 @@ set :site_title, 'Высшая Школа Главбуха'
 # Мидлмен
 #
 
-configure :build do
-  activate :minify_javascript
-  set :js_compressor, ::Closure::Compiler.new
-end
+# configure :build do
+#   activate :minify_javascript
+#   set :js_compressor, ::Closure::Compiler.new
+# end
 
 # activate :directory_indexes
 
