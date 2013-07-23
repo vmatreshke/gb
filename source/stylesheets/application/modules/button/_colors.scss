@@ -71,8 +71,17 @@
 .button-orange {
   border-color: transparent transparent #D24E00 transparent;
   color: #FFF;
+  position: relative;
   text-shadow: 0 -1px rgba(#800, 0.4);
-
+  .certif{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 16px;
+    height: 11px;
+    background: url(../images/cert.png) no-repeat 0 0;
+    display: inline-block;
+  }
   &:hover {
     @include linear-gradient(#fd9600, #fb7a00);
   }
