@@ -41,7 +41,7 @@
 }
 
 .button-blue {
-  border-color: transparent transparent #0251d9 transparent;
+  border-color: #4489e6 transparent darken(#0251d9, 20%) transparent;
   color: #FFF;
   font-weight: normal;
 
@@ -107,6 +107,7 @@
   &:active {
     @include linear-gradient(#fafafa, #ededed);
     box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+    border-bottom-color:#F3F3F3;
   }
 
   &,
