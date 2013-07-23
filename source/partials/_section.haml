@@ -15,14 +15,14 @@
         %li{class: basic_section_class} 
           %span Базовый
         %li{class: advanced_section_class} 
-          %span Углубленный
+          %span Продвинутый
     .section-view{class: basic_section_class}
       = partial('partials/section/courses', locals: {items: items_basic})
     .section-view.section-view-advanced{class: advanced_section_class}
       - if advanced_overlay
         .section-overlay
           .section-modal.drop-shadow
-            Курсы продвинутого уровня доступны обладателям базового сертификата — вам осталось 1650 баллов.
+            Курсы продвинутого уровня доступны обладателям базового сертификата — вам осталось 1650 баллов
             /= partial('partials/chunks/drop-shadow')
       = partial('partials/section/courses', locals: {items: items_advanced})
       
