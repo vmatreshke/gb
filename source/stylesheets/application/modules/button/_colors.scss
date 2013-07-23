@@ -50,8 +50,10 @@
   }
 
   &:active {
-    @include linear-gradient(#4a8de6, #3667cf);
+    @include linear-gradient(#0D77D5, #0E6CC1);
     //box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.4);
+      box-shadow: inset 0 2px 5px -2px rgba(0, 0, 0, 0.4);
+      border-bottom-color: #0E6CC1;
   }
 
   &,
@@ -87,8 +89,10 @@
   }
 
   &:active {
-    @include linear-gradient(#ec8a00, #e07100);
-    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.3);
+    @include linear-gradient(#E97219, #DB6816);
+    //box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 5px -2px rgba(0, 0, 0, 0.4);
+      border-bottom-color: #DB6816;
   }
 
   &,
@@ -114,9 +118,9 @@
   }
 
   &:active {
-    @include linear-gradient(#fafafa, #ededed);
-    box-shadow: inset 0 2px 3px -2px rgba(0, 0, 0, 0.2);
-    border-bottom-color:#F3F3F3;
+    @include linear-gradient(#F3F3F3, #EBEBEB);
+    box-shadow: inset 0 2px 5px -2px rgba(0, 0, 0, 0.2);
+    border-color: #DEDEDE #DEDEDE #DEDEDE #DEDEDE;
   }
 
   &,
