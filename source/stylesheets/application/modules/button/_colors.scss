@@ -41,7 +41,7 @@
 }
 
 .button-blue {
-  border-color: #4489e6 transparent darken(#0251d9, 20%) transparent;
+  border-color: #4489e6 transparent #0350A1 transparent;
   color: #FFF;
   font-weight: normal;
 
@@ -85,7 +85,7 @@
     display: inline-block;
   }
   &:hover {
-    @include linear-gradient(#fd9600, #fb7a00);
+    @include linear-gradient(#F39935, #EF7F2C);
   }
 
   &:active {
