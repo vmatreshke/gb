@@ -1,53 +1,242 @@
 .exam {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 
-  h2 {
-    @include font-height(30px, 40px);
-    font-weight: normal;
-    margin: 0 0 18px;
-  }
+	h2 {
+		@include font-height(30px, 40px);
+		font-weight: normal;
+		margin: 0 0 18px;
+	}
 
-  p {
-    margin: 0 0 8px;
-  }
+	p {
+		margin: 0 0 8px;
+	}
 }
 
 .exam-inner {
-  background: #FFF;
-  border-radius: 3px;
-  overflow: hidden;
-  padding: 40px 0 60px;
+	background: #FFF;
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 40px 0 60px;
 }
 
 .exam-aside {
-  float: left;
-  margin-left: 3%;
-  width: 21%;
+	float: left;
+	margin-left: 3%;
+	width: 21%;
 }
 
 .exam-main {
-  float: right;
-  margin-right: 6%;
-  width: 70%;
+	float: right;
+	margin-right: 6%;
+	width: 70%;
 }
 
 .exam-actions {
-  margin-top: 25px;
+	margin-top: 25px;
 }
 
 .exam-actions-aside {
-  color: #999;
-  float: right;
-  margin-top: 6px;
+	color: #999;
+	float: right;
+	margin-top: 6px;
 }
 
 .exam-lead {
-  @include font-height(18px, 24px);
-  margin: 10px 0 24px !important;
+	@include font-height(18px, 24px);
+	margin: 10px 0 24px !important;
 }
 
 .exam-error {
-  @include font-height(18px, 24px);
-  color: #c6332f;
-  margin: 32px 0 8px !important;
+	@include font-height(18px, 24px);
+	color: #c6332f;
+	margin: 32px 0 8px !important;
 }
+
+
+// NEW STYLES!!!! for rating
+
+
+.l-header-alt h1 small{
+	font-size: 13px;
+	display: block;
+	margin: -24px 0 0px 0;
+}
+.l-header-alt>.headline-small-alt{
+		margin: 0;
+		display: inline-block;
+		float: none;
+		margin-bottom: 24px;
+		background: url(../images/logoalt.png) no-repeat 0 0;
+	}
+.l-header-alt h1{
+	margin-bottom: 0;
+}
+
+
+.exam-rating{
+	padding: 15px 100px 0px 50px;
+}
+.partic{
+	display: block;
+	margin: 0 -100px 0 -50px;
+	position: relative;
+	padding: 12px 100px 12px 210px;
+	&.is-me{
+		background: #FFF9C6;
+	}
+	.partic__place{
+		width: 57px;
+		position: absolute;
+		left: 0;
+		text-align: right;
+		font-size: 11px;
+		bottom: 14px;
+		line-height: 1;
+	}
+	.partic__points{
+		position: absolute;
+		left: 113px;
+		width: 71px;
+		text-align: center;
+		font-size: 16px;
+		bottom: 14px;
+		line-height: 1;
+	}
+	.partic__name{
+		text-decoration: none;
+		font-size: 16px;
+		@extend .link;
+		@extend .link-black;
+	}
+	.partic__meta{
+		margin-top: 5px;
+		font-size: 13px;
+	}
+	.partic__text{
+		font-size: 13px;
+		margin-top: 3px;
+		color: #000;
+	}
+	&.partic_3, &.partic_2, &.partic_1{
+		.partic__name{
+			font-size: 24px;
+			color: #b95512;
+			border-bottom: 1px solid #b95512;
+			border-bottom: 1px solid rgba(#b95512, .3);
+		}
+		
+		.partic__points{
+			color: #b95512;
+			i{
+				width: 70px;
+				height: 32px;
+				background: url(../images/place3.png) no-repeat 0 0;
+				display: inline-block;
+				margin-bottom: -4px;
+			}
+		}
+		.partic__place{
+			bottom: auto;
+			top: 21px;
+		}
+	}
+	&.partic_2{
+		.partic__name{
+			font-size: 24px;
+			color: #54748c;
+			border-bottom: 1px solid #54748c;
+			border-bottom: 1px solid rgba(#54748c, .3);
+		}
+		.partic__points{
+			color: #54748c;
+			font-size: 20px;
+			i{
+				width: 71px;
+				height: 38px;
+				background: url(../images/place2.png) no-repeat 0 0;
+				display: inline-block;
+				margin-bottom: -5px;
+			}
+		}
+	}
+	&.partic_1{
+		.partic__name{
+			font-size: 24px;
+			color: #EE9333;
+			border-bottom: 1px solid #EE9333;
+			border-bottom: 1px solid rgba(#EE9333, .3);
+		}
+		.partic__points{
+			color: #EE9333;
+			font-size: 25px;
+			top: 7px;
+			i{
+				width: 70px;
+				height: 59px;
+				background: url(../images/place1.png) no-repeat 0 0;
+				display: inline-block;
+				margin-bottom: -5px;
+			}
+			small{
+				font-size: 13px;
+				display: inline-block;
+				margin-top: -2px;
+			}
+		}
+	}
+}
+.partic__all{
+	width: 57px;
+	margin-left: -50px;
+	text-align: right;
+	font-size: 11px;
+	color: #000;
+	padding-top: 5px;
+}
+.exam{
+	z-index: 100;
+}
+.exam__p1{
+	position: fixed;
+	right: 0;
+	top: 50px;
+	width: 303px;
+	height: 776px;
+	background: url(../images/confetti1.png);
+	z-index: 200;
+}
+.exam__p2{
+	position: fixed;
+	right: 0;
+	top: 50px;
+	width: 509px;
+	height: 790px;
+	background: url(../images/confetti2.png);
+	z-index: 50;
+}
+.parallax-layer {
+    //position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

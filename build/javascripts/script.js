@@ -562,6 +562,16 @@
 }(jQuery));
 (function ($) {
 
+   // alert('a');
+
+   jQuery('.parallax-layer').parallax({
+        mouseport: jQuery(".exam"),
+        xparallax: false
+      });
+
+}(jQuery));
+(function ($) {
+
     'use strict';
 
     var Progress = app.classes.Progress = function (selector) {
