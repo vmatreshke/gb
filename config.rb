@@ -1,7 +1,7 @@
 #
 # Сайт
 #
-
+activate :relative_assets
 set :site_title, 'Высшая Школа Главбуха'
 
 #
