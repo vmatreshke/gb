@@ -1,13 +1,72 @@
 .epilogue {
-  background: #ebe6ce;
-  margin-top: 70px;
-  padding: 65px;
+	background: #ebe6ce;
+	margin-top: 70px;
+	padding: 65px;
 
-  &:before {
-    @include sprite-dimensions($sprite-assets, oxford-cap);
-    background: sprite($sprite-assets, oxford-cap);
-    content: '';
-    display: block;
-    margin: auto;
-  }
+	&:before {
+		@include sprite-dimensions($sprite-assets, oxford-cap);
+		background: sprite($sprite-assets, oxford-cap);
+		content: '';
+		display: block;
+		margin: auto;
+	}
+}
+
+.ep{
+	font-size: 0;
+	overflow: hidden;
+	padding-top: 24px;
+	background: url(../images/promoline.png) no-repeat 50% 0;
+	margin-top: 40px;
+	text-align: center;
+	.ep__col{
+		width: 33%;
+		float: left;
+		position: relative;
+		text-align: left;
+		left: 15px;
+	}
+	.ep__title{
+		font-size: 24px;
+		font-weight: bold;
+		color: #000;
+		margin-bottom: 10px;
+	}
+	ul{
+		list-style: none;
+		font-size: 13px;
+		color: #b3b0a1;
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		margin-bottom: 8px;
+	}
+	.is-active{
+		color: #000;
+	}
+	small{
+		display: block;
+		margin-top: 8px;
+		font-size: 13px;
+	}
+	.ep__submit{
+		width: 150px;
+		text-align: center;
+		font-size: 16px;
+		height: 33px;
+		line-height: 33px;
+		border: 1px solid #cfa338;
+		cursor: pointer;
+		border: 1px solid #b3b0a1;
+		border-radius: 4px;
+		background-color: #f5f3ea;
+		box-shadow: 0 3px 6px rgba(77,54,23,.1);
+		@include background-image(linear-gradient(top, #f9f8ef 0%, #eae7d7 100%));
+		&.ep__submit_orange{
+			border: 1px solid #cfa338;
+			background-color: #ffcd4f;
+			@include background-image(linear-gradient(top, #ffd670 0%, #f5b517 100%));
+		}
+	}
 }

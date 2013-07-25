@@ -1,26 +1,59 @@
 .epilogue.drop-shadow
-  .text-center
-    %h1.headline.headline-large.hide-text{style: 'margin: 15px auto 45px'} Высшая Школа Главбуха
+	.text-center
+		%h1.headline.headline-large.hide-text{style: 'margin: 15px auto 45px'} Высшая Школа Главбуха
 
-  %table
-    %col{width: 1}
-    %col{width: '33.3%'}
-    %col{width: 1}
-    %col{width: '33.3%'}
-    %col{width: 1}
-    %col{width: '33.3%'}
-    %tr
-      %td<
-        .asset.asset-stencil-a
-      %td.text-xsmall Смотрите или читайте лекции и изучайте методические пособия
-      %td<
-        .asset.asset-stencil-b
-      %td.text-xsmall В конце каждого курса сдавайте тест и набирайте баллы.
-      %td<
-        .asset.asset-stencil-c
-      %td.text-xsmall Получайте базовый, а после углубленных курсов — и золотой сертификат.
-
-  %div{style: 'text-align: center; margin: 28px 0 0'}
-    %a.button.button-yellow.button-xxxlarge{href: 'registration'} Записаться в школу...
-    %p{style: 'margin: 20px auto 0; width: 440px;'} Мы постарались сделать школу интересной и&nbsp;полезной, и&nbsp;надеемся, что вам понравится учеба.
-  = partial 'partials/chunks/drop-shadow'
+	%table
+		%col{width: 1}
+		%col{width: '33.3%'}
+		%col{width: 1}
+		%col{width: '33.3%'}
+		%col{width: 1}
+		%col{width: '33.3%'}
+		%tr
+			%td<
+				.asset.asset-stencil-a
+			%td.text-xsmall Смотрите или читайте лекции и изучайте методические пособия
+			%td<
+				.asset.asset-stencil-b
+			%td.text-xsmall В конце каждого курса сдавайте тест и набирайте баллы.
+			%td<
+				.asset.asset-stencil-c
+			%td.text-xsmall Получайте базовый, а после углубленных курсов — и золотой сертификат.
+	.ep
+		.ep__col
+			%h3.ep__title Пробный доступ
+			%ul
+				%li.is-active 9 базовых курсов
+				%li Базовый и золотой сертификаты
+				%li Журнал «Главбух»
+				%li Электронные сервисы
+				%li Образцы бланков
+				%li Правовая база
+			.ep__submit.ep__submit_orange Попробовать
+			%small Бесплатно
+		.ep__col
+			%h3.ep__title Полный доступ
+			%ul
+				%li.is-active 52 базовых и продвинутых курса
+				%li.is-active Базовый и золотой сертификаты
+				%li Журнал «Главбух»
+				%li Электронные сервисы
+				%li Образцы бланков
+				%li Правовая база
+			.ep__submit Купить
+			%small За 10000 руб. a в год
+		.ep__col
+			%h3.ep__title С «Главбухом»
+			%ul
+				%li.is-active 52 базовых и продвинутых курса
+				%li.is-active Базовый и золотой сертификаты
+				%li.is-active Журнал «Главбух»
+				%li.is-active Электронные сервисы
+				%li.is-active Образцы бланков
+				%li.is-active Правовая база
+			.ep__submit Подписаться
+			%small За 13300 руб. a в год
+	/ %div{style: 'text-align: center; margin: 28px 0 0'}
+	/   %a.button.button-yellow.button-xxxlarge{href: 'registration'} Записаться в школу...
+	/   %p{style: 'margin: 20px auto 0; width: 440px;'} Мы постарались сделать школу интересной и&nbsp;полезной, и&nbsp;надеемся, что вам понравится учеба.
+	/ = partial 'partials/chunks/drop-shadow'
