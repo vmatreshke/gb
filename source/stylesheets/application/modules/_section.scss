@@ -8,10 +8,11 @@
     //background: red;
     border-radius: 4px;
     @include background-image(linear-gradient(#5B5B5B, #373737));
+    .section-sidebar,.section-sidebar:before{
+      background: none !important;
+    }
   }
-  .section-sidebar,.section-sidebar:before{
-    background: none !important;
-  }
+  
 }
 
 .section-inner {
