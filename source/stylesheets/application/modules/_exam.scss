@@ -76,6 +76,9 @@
 .exam-rating{
 	padding: 15px 100px 0px 50px;
 }
+.exam-inner-alt{
+	padding-bottom: 16px;
+}
 .partic{
 	display: block;
 	margin: 0 -100px 0 -50px;
@@ -83,6 +86,9 @@
 	padding: 12px 100px 12px 210px;
 	&.is-me{
 		background: #FFF9C6;
+	}
+	&.partic_spaced{
+		margin-top: 20px;
 	}
 	.partic__place{
 		width: 57px;
