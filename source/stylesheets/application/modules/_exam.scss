@@ -72,7 +72,10 @@
 	margin-bottom: 0;
 }
 
-
+.l-page>div:first-child{
+	position: relative;
+	z-index: 300;
+}
 .exam-rating{
 	padding: 15px 100px 0px 50px;
 }
