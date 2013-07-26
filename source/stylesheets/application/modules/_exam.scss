@@ -253,7 +253,7 @@
 }
 .stats-descr{
 	font-size: 14px;
-	line-height: 1.7;
+	line-height: 1.5;
 	margin-bottom: 20px;
 	b{
 		font-weight: bold;
@@ -273,7 +273,7 @@
 		font-family: "Helvetica neue",arial,sans-serif;
 		line-height: 1;
 		font-size: 36px;
-		font-weight: 100;
+		font-weight: 300;
 	}
 	i{
 		display: inline-block;
@@ -294,7 +294,13 @@
 .stats-nextcourse{
 	margin-top: 50px;
 }
-
+.balloon{
+	z-index: 100;
+}
+.footer-wrap{
+	display: inline-block;
+	text-align: left;
+}
 
 
 
