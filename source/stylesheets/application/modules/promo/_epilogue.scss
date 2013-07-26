@@ -1,3 +1,29 @@
+$explorer-version: false !default;
+
+@mixin explorer ($versions) {
+  @if explorer($versions) {
+	@content;
+  }
+}
+@mixin font-face ($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+	font-family: $font-family;
+	@include explorer(8) {
+	  src: font-url("#{ $file-path }.eot");
+	  src: font-url("#{ $file-path }.eot?#iefix") format('embedded-opentype');
+	}
+	@include explorer(9 false) {
+	  src: inline-font-files("#{ $file-path }.woff", woff);
+	}
+	font-weight: $weight;
+	font-style: $style;
+  }
+}
+
+//@include font-face('Ruble Merge Pro',    'RubleMergePro-Regular',    400, normal);
+@include font-face('Ruble Arial',        'RubleArial-Regular',       400, normal);
+
+//@include font-face("Rub", font-files('RubleArial-Regular.woff', 'RubleArial-Regular.eot'));
 .epilogue {
 	background: #ebe6ce;
 	margin-top: 70px;
@@ -20,6 +46,7 @@
 	overflow: hidden;
 	padding-top: 24px;
 	background: url(../images/promoline.png) no-repeat 50% 0;
+	@include background-size(80%, 1px);
 	margin-top: 40px;
 	text-align: center;
 	.ep__col{
@@ -27,7 +54,7 @@
 		float: left;
 		position: relative;
 		text-align: left;
-		left: 15px;
+		left: 45px;
 	}
 	.ep__title{
 		font-size: 24px;
@@ -53,6 +80,10 @@
 		display: block;
 		margin-top: 8px;
 		font-size: 13px;
+		
+		span{
+			font-family: 'Ruble Arial',arial,sans-serif;
+		}
 	}
 	.ep__submit{
 		width: 150px;

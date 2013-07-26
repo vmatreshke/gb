@@ -1,14 +1,8 @@
 - menu ||= false
 
-/ .l-header.l-header-alt
-/   %a.button.button-white.button-prev.pull-left{href: 'courses'} Все курсы
-/   .headline.headline-small.hide-text.pull-left Высшей Школы Главбуха
-/   %h1= current_page.data.title
-/   - if menu
-/     = partial('partials/menu')
-
 .l-header.l-header-alt
-  .headline.headline-small.headline-small-alt.hide-text.pull-left Высшей Школы Главбуха
+  %a.button.button-white.button-prev.pull-left{href: 'courses'} Все курсы
+  .headline.headline-small.hide-text.pull-left Высшей Школы Главбуха
+  %h1= current_page.data.title
   - if menu
     = partial('partials/menu')
-  %h1= current_page.data.title
