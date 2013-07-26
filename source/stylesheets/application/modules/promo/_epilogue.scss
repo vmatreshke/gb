@@ -19,7 +19,9 @@ $explorer-version: false !default;
 	font-style: $style;
   }
 }
-
+*{
+	//outline: 1px solid rgba(#000, .3);
+}
 //@include font-face('Ruble Merge Pro',    'RubleMergePro-Regular',    400, normal);
 @include font-face('Ruble Arial',        'RubleArial-Regular',       400, normal);
 

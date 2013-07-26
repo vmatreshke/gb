@@ -2,6 +2,7 @@
 
    // alert('a');
 if($(".parallax-layer").length>0){
+$(".parallax-layer").insertBefore($(".l-container"));
 var scrollorama = $.scrollorama({ blocks:'.parallax-layer' });
 scrollorama
 	.animate('#layer1',{ duration:1000, property:'top', start:80, end: -100 })
