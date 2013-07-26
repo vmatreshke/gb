@@ -106,6 +106,7 @@ $explorer-version: false !default;
 		}
 		&:active{
 			@include background-image(linear-gradient(top, #FAF8F0 0%, #ECE8DA 100%));
+			@include box-shadow(0 1px 3px rgba(77,54,23,.45));
 		}
 		&.ep__submit_orange{
 			border: 1px solid #EDB84F;
@@ -118,6 +119,7 @@ $explorer-version: false !default;
 			}
 			&:active{
 				@include background-image(linear-gradient(top, #FFD577 0%, #F9B534 100%));
+				@include box-shadow(0 1px 3px rgba(77,54,23,.45));
 			}
 		}
 	}

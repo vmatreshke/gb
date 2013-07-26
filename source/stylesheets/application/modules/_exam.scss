@@ -80,11 +80,11 @@
 	}
 	.menu, .headline{
 		position: relative;
-		top: 5px;
+		top: 10px;
 	}
 	.menu{
-		top: 4px;
-		margin-bottom: 36px;
+		top: 9px;
+		margin-bottom: 36px + 5px;
 	}
 }
 
@@ -189,12 +189,13 @@
 	&.partic_1{
 		.partic__name{
 			font-size: 24px;
-			color: #EE9333;
-			border-bottom: 1px solid #EE9333;
-			border-bottom: 1px solid rgba(#EE9333, .3);
+			color: #eea333;
+
+			border-bottom: 1px solid #eea333;
+			border-bottom: 1px solid rgba(#eea333, .3);
 		}
 		.partic__points{
-			color: #EE9333;
+			color: #eea333;
 			font-size: 25px;
 			top: 7px;
 			top: -7px;
