@@ -1,0 +1,64 @@
+---
+layout: layout_exam
+title: "Материалы: тест сдан"
+---
+
+- content_for :exam do
+  .exam.drop-shadow
+    .exam-inner
+      .exam-aside
+        = partial('partials/elevator', locals: {done: (1..3).to_a})
+      .exam-main.exam-stats
+        / %button.button.button-white.button-large#sandbox-proceed Ответить правильно
+        / %button.button.button-white.button-large#sandbox-fail Ошибиться
+        / %button.button.button-white.button-large#sandbox-succeed Пройти тест
+
+        .stats-text
+          %b Вы заработали
+        .stats-points
+          220
+          %small баллов
+        .stats-descr
+          %b 150
+          за тест,
+          %b 50
+          за сдачу с первой попытки,
+          %br 
+          %b 20
+          за время меньше десяти минут
+        .stats-try
+          %i 
+          %strong 1
+          %span Попытка
+        .stats-time
+          %i 
+          %strong 7:31
+          %span Общее время попыток
+        .clr
+        .stats-nextcourse.button.button-blue.button-large
+          Следующий курс
+
+
+    = partial('partials/chunks/drop-shadow')
+
+- content_for :progress do
+  = partial('partials/progress', locals: data.progress.test)
+
+- content_for :score do
+  = partial('partials/exam/balloon')
+
+- content_for :scripts do
+  :javascript
+    app.module({
+        init: function () {
+            $('#sandbox-proceed').click(function () {
+              $('.elevator').data('app:elevator').proceed();
+            });
+            $('#sandbox-fail').click(function () {
+              $('.elevator').data('app:elevator').fail();
+            });
+            $('#sandbox-succeed').click(function () {
+              $('.balloon').data('app:balloon').vanish();
+            });
+        }
+    });
