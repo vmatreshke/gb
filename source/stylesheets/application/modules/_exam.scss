@@ -68,8 +68,24 @@
 		margin-bottom: 19px;
 		background: url(../images/logoalt.png) no-repeat 0 0;
 	}
-.l-header-alt h1{
-	margin-bottom: 11px;
+.l-header-alt {
+	h1{
+		margin-bottom: 23px;
+		line-height: 48px;
+		small{
+			line-height: 1;
+			margin: 0;
+			padding-top: 3px;
+		}
+	}
+	.menu, .headline{
+		position: relative;
+		top: 5px;
+	}
+	.menu{
+		top: 4px;
+		margin-bottom: 36px;
+	}
 }
 
 
@@ -82,6 +98,7 @@
 }
 .exam-inner-alt{
 	padding-bottom: 16px;
+	padding-top: 15px;
 }
 .partic{
 	display: block;
