@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="l-page">
-      <div style="background: #333; height: 32px"></div>
+      <div style="background: #333; height: 32px; position: fixed; top: 0; left: 0; right: 0;"></div>
       <div class="l-container">
         <table class="l-triplet">
           <colgroup>
@@ -33,31 +33,32 @@
           <tr>
             <td class="l-triplet-cell" colspan="3">
               <div class="l-header l-header-alt">
-                <a class="button button-white button-prev pull-left" href="courses">Все курсы</a>
-                <div class="headline headline-small hide-text pull-left">Высшей Школы Главбуха</div>
+                <div class="headline headline-small headline-small-alt hide-text pull-left">Высшей Школы Главбуха</div>
+                <ul class="menu clearfix">
+                  <li><a class="link link-bare" href="courses.html"><u>Курсы</u></a></li>
+                  <li><a class="link link-bare" href="news.html"><u>Новости</u></a></li>
+                  <li><a class="link link-bare" href="rating.html"><u>Рейтинг</u></a></li>
+                  <li><a class="link link-bare" href="council.html"><u>Ученый совет</u></a></li>
+                  <li><a class="link link-bare" href="questions.html"><u>Частые вопросы</u></a></li>
+                </ul>
                 <h1>Материалы: тест</h1>
               </div>
             </td>
             <td class="l-triplet-cell">
-              <div class="progress">
-                <div class="progress-header">2000</div>
-                <div class="progress-main">
-                  <div class="progress-inner">
-                    <div class="progress-bar">
-                      <div class="progress-progress" style="width: 18%"></div>
-                      <div class="progress-mark progress-mark-line" style="left: 50%"></div>
-                      <div class="progress-mark progress-mark-line" style="left: 100%"></div>
-                      <div class="progress-mark progress-mark-line" style="left: 150%"></div>
+              <div class="b-side-regards b-side-regards_width">
+                    <div class="b-side-regards__numbers u-clear-fix">
+                        <b>3810 баллов</b>
+                        <span>15 000</span>
                     </div>
-                  </div>
+                    <div class="b-line u-clear-fix">
+                        <div class="b-line_shadow"></div>
+                        <div class="b-line__sel b-line__sel_1" style="width: 20.66666667%;"></div>
+                    </div>
+                    <div class="b-line__marker u-clear-fix">
+                        <div class="b-line__marker_max"><i></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress-footer">
-                  У вас
-                  <span class="counter">350</span>
-                  баллов
-                  <a class="link link-black" href="#">Достижения</a>
-                </div>
-              </div>
             </td>
           </tr>
           <tr>
@@ -115,7 +116,7 @@
                     <p>Возможно вы выбрали не все правильные варианты.</p>
                     <p>Не расстраивайтесь, просто повторите эту тему. Основание изложено в подп. 8 п. 1 ст. 265 Налогового кодекса РФ. Вопрос освещен подробнее в презентации «Продажа и прочее выбытие».</p>
                     <div class="exam-actions">
-                      <a class="button button-blue button-next" href="course-page">Разобраться в теме</a>
+                      <a class="button button-blue button-next" href="course-page.html">Разобраться в теме</a>
                     </div>
                   </div>
                 </div>
@@ -123,15 +124,15 @@
               </div>
             </td>
             <td class="l-triplet-cell">
-            
+
             </td>
           </tr>
           <tr>
             <td class="l-triplet-cell" colspan="5">
-              <div class="l-footer l-footer-tall text-center">
+              <div class="l-footer l-footer-tall">
                 <div class="footer-wrap">
                   ©&nbsp;ЗАО «Актион-Медиа»<br>
-                  <a class="link link-black" href="/about">О школе</a>
+                  <a class="link link-black" href="about.html">О школе</a>
                 </div>
               </div>
             </td>
@@ -139,7 +140,7 @@
         </table>
       </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascripts/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="javascripts/plugins.js"></script>
     <script src="javascripts/script.js"></script>

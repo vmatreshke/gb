@@ -151,6 +151,11 @@
             return (/^\S+@\S+\.\S+$/).test($(this).bureaucrat('value', name));
         },
 
+        integer: function (name) {
+            return (/^[0-9.,]+$/).test($(this).bureaucrat('value', name));
+        },
+
+
         required: function (name) {
             return !!$(this).bureaucrat('value', name);
         }

@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="l-page">
-      <div style="background: #333; height: 32px"></div>
+      <div style="background: #333; height: 32px; position: fixed; top: 0; left: 0; right: 0;"></div>
       <div class="l-container">
         <table class="l-triplet">
           <colgroup>
@@ -47,45 +47,42 @@
                   <div class="headline headline-medium hide-text">Высшая Школа Главбуха</div>
                   <ul class="menu clearfix">
                     <li class="is-current"><b>Курсы</b></li>
-                    <li><a class="link link-bare" href="news"><u>Новости</u></a></li>
-                    <li><a class="link link-bare" href="rating"><u>Рейтинг</u></a></li>
-                    <li><a class="link link-bare" href="council"><u>Ученый совет</u></a></li>
-                    <li><a class="link link-bare" href="questions"><u>Частые вопросы</u></a></li>
+                    <li><a class="link link-bare" href="news.html"><u>Новости</u></a></li>
+                    <li><a class="link link-bare" href="rating.html"><u>Рейтинг</u></a></li>
+                    <li><a class="link link-bare" href="council.html"><u>Ученый совет</u></a></li>
+                    <li><a class="link link-bare" href="questions.html"><u>Частые вопросы</u></a></li>
                   </ul>
                 </div>
               </td>
               <td class="l-triplet-cell">
-                <div class="clearfix">
-                  <div class="l-stats clearfix">
-                    <div class="frame-stack pull-right">
-                      <div class="frame frame-wooden">
-                        <a href="certificate"><img height="74" src="images/static/frame/simple.png" width="104"></a>
-                      </div>
-                      <div class="frame frame-dashed">
-                        <div class="frame-label"><span>5000 баллов</span></div>
-                        <img height="74" src="images/static/frame/gold.png" width="110">
-                      </div>
+
+                <a href="#" class="b-side-regards">
+                    <div class="b-side-regards__numbers u-clear-fix">
+                        <b>3810 баллов</b>
+                        <span>15 000</span>
                     </div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-main">
-                    <div class="progress-inner">
-                      <div class="progress-bar">
-                        <div class="progress-progress" style="width: 18%"></div>
-                        <div class="progress-mark progress-mark-line" style="left: 50%"></div>
-                        <div class="progress-mark progress-mark-line" style="left: 100%"></div>
-                        <div class="progress-mark progress-mark-line" style="left: 150%"></div>
-                      </div>
+                    <div class="b-line u-clear-fix">
+                        <div class="b-line_shadow"></div>
+                        <div class="b-line__sel b-line__sel_1" style="width: 20.66666667%;"></div>
                     </div>
-                  </div>
-                  <div class="progress-footer">
-                    У вас
-                    <span class="counter">350</span>
-                    баллов
-                    <a class="link link-black" href="#">Достижения</a>
-                  </div>
-                </div>
+                    <div class="b-line__marker u-clear-fix">
+                        <div class="b-line__marker_max">
+                            <s></s><i></i>
+                        </div>
+                    </div>
+                    <div class="u-clear-fix">
+                        <div class="b-side-regards__list">
+                            <span class="link link-black"><s></s>Мои достижения</span>
+                            <ul>
+                                <li>5 сертификатов</li>
+                                <li class="b-side-regards__list_clean">0 наград</li>
+                                <li>17 тестов</li> <!-- add class="b-side-regards__list_clean" for clean line -->
+                            </ul>
+                        </div>
+                        <div class="b-side-regards__certificate"></div>
+                    </div>
+                </a>
+
               </td>
             </tr>
           </tr>
@@ -150,18 +147,18 @@
                     </div>
                   </div>
                   <div class="is-active section-view">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                           </div>
                           <div class="courses-item-description">
                             Учетная политика, документооборот, первичные документы
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-white" href="test-checkboxes">
+                          <a class="button button-white" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -170,14 +167,14 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учёт, оценка, амортизация, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -194,7 +191,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -208,21 +205,21 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Товары</a>
+                            <a class="link link-black" href="course-page.html">Товары</a>
                           </div>
                           <div class="courses-item-description">
                             Неотфактурованные товары, поступление и реализация
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -239,7 +236,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-divider">После сдачи предыдущих тестов откроются следующие курсы:</div>
@@ -253,17 +250,17 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="section-view section-view-advanced">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -271,7 +268,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-beuge" href="test-checkboxes">
+                          <a class="button button-beuge" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -280,7 +277,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -288,7 +285,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -297,7 +294,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Нематериальные активы</a>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -305,7 +302,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -314,7 +311,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Материалы</a>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -322,7 +319,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -376,18 +373,18 @@
                     </div>
                   </div>
                   <div class="is-active section-view">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                           </div>
                           <div class="courses-item-description">
                             Учетная политика, документооборот, первичные документы
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-white" href="test-checkboxes">
+                          <a class="button button-white" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -396,14 +393,14 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учёт, оценка, амортизация, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -413,7 +410,7 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Нематериальные активы</a>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
                           </div>
                           <div class="courses-item-description">
                             <span class="icon icon-pointer pull-left"></span>
@@ -423,7 +420,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -433,14 +430,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-semicircle pull-left"></span>
-                            <a class="link link-black" href="course-page">Материалы</a>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учет, оценка, передача в производство, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -450,14 +447,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Товары</a>
+                            <a class="link link-black" href="course-page.html">Товары</a>
                           </div>
                           <div class="courses-item-description">
                             Неотфактурованные товары, поступление и реализация
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -467,14 +464,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Готовая продукция</a>
+                            <a class="link link-black" href="course-page.html">Готовая продукция</a>
                           </div>
                           <div class="courses-item-description">
                             Реализация и себестоимость
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -497,7 +494,7 @@
                     </div>
                   </div>
                   <div class="section-view section-view-advanced">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-divider">Скоро откроются:</div>
                       <div class="courses-item is-unavailable">
                         <div class="courses-item-body">
@@ -524,7 +521,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -552,7 +549,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -566,7 +563,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -580,7 +577,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                     </div>
@@ -602,18 +599,18 @@
                     </div>
                   </div>
                   <div class="section-view">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                           </div>
                           <div class="courses-item-description">
                             Учетная политика, документооборот, первичные документы
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-white" href="test-checkboxes">
+                          <a class="button button-white" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -622,14 +619,14 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учёт, оценка, амортизация, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -646,7 +643,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -660,21 +657,21 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Товары</a>
+                            <a class="link link-black" href="course-page.html">Товары</a>
                           </div>
                           <div class="courses-item-description">
                             Неотфактурованные товары, поступление и реализация
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -691,7 +688,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-divider">После сдачи предыдущих тестов откроются следующие курсы:</div>
@@ -705,17 +702,17 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="is-active section-view section-view-advanced">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -723,7 +720,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-beuge" href="test-checkboxes">
+                          <a class="button button-beuge" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -732,7 +729,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -740,7 +737,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -749,7 +746,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Нематериальные активы</a>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -757,7 +754,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -766,7 +763,7 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Материалы</a>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
                             <span class="icon icon-pro"></span>
                           </div>
                           <div class="courses-item-description">
@@ -774,7 +771,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -828,18 +825,18 @@
                     </div>
                   </div>
                   <div class="section-view">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                           </div>
                           <div class="courses-item-description">
                             Учетная политика, документооборот, первичные документы
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-white" href="test-checkboxes">
+                          <a class="button button-white" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -848,14 +845,14 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учёт, оценка, амортизация, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -865,7 +862,7 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Нематериальные активы</a>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
                           </div>
                           <div class="courses-item-description">
                             <span class="icon icon-pointer pull-left"></span>
@@ -875,7 +872,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -885,14 +882,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-semicircle pull-left"></span>
-                            <a class="link link-black" href="course-page">Материалы</a>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учет, оценка, передача в производство, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -902,14 +899,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Товары</a>
+                            <a class="link link-black" href="course-page.html">Товары</a>
                           </div>
                           <div class="courses-item-description">
                             Неотфактурованные товары, поступление и реализация
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -919,14 +916,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Готовая продукция</a>
+                            <a class="link link-black" href="course-page.html">Готовая продукция</a>
                           </div>
                           <div class="courses-item-description">
                             Реализация и себестоимость
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -955,7 +952,7 @@
                         <!-- = partial('partials/chunks/drop-shadow') -->
                       </div>
                     </div>
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-divider">Скоро откроются:</div>
                       <div class="courses-item is-unavailable">
                         <div class="courses-item-body">
@@ -982,7 +979,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1010,7 +1007,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1024,7 +1021,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1038,7 +1035,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                     </div>
@@ -1046,9 +1043,726 @@
                 </div>
                 <div class="bl"></div><div class="b"></div><div class="br"></div>
               </div>
+
               <div class="section drop-shadow">
                 <div class="section-inner">
-                  <div class="section-e section-sidebar section-sidebar-" style="background-image: url('images/pattern-e.png')">
+                  <div class="section-f section-sidebar section-sidebar-" style="background-image: url('images/pattern-f.png')">
+                    <h2>Расчеты</h2>
+                    <div class="section-toggle">
+                      <li class="is-active">
+                        <span>Базовый</span>
+                      </li>
+                      <li>
+                        <span>Продвинутый уровень</span>
+                      </li>
+                    </div>
+                  </div>
+                  <div class="is-active section-view">
+                    <div class="courses.html">
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-white" href="test-checkboxes.html">
+                            <span class="icon icon-restart pull-right"></span>
+                            Сдано
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+100</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-circle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            <span class="icon icon-pointer pull-left"></span>
+                            <span class="courses-update">Курс обновился</span> после введения закона от 20 июля 2012 г. № 125-ФЗ
+                            <br>
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-semicircle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-view section-view-advanced">
+                    <div class="courses.html">
+                      <div class="courses-divider">Скоро откроются:</div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Постановка учета, организация бухгалтерии
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в апреле
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Основные средства
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Нематериальные активы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в мае
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Материалы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Товары
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Неотфактурованные товары, поступление и реализация
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Готовая продукция
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Реализация и себестоимость
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bl"></div><div class="b"></div><div class="br"></div>
+              </div>
+
+              <div class="section drop-shadow">
+                <div class="section-inner">
+                  <div class="section-g section-sidebar section-sidebar-" style="background-image: url('images/pattern-g.png')">
+                    <h2>Расчеты</h2>
+                    <div class="section-toggle">
+                      <li class="is-active">
+                        <span>Базовый</span>
+                      </li>
+                      <li>
+                        <span>Продвинутый уровень</span>
+                      </li>
+                    </div>
+                  </div>
+                  <div class="is-active section-view">
+                    <div class="courses.html">
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-white" href="test-checkboxes.html">
+                            <span class="icon icon-restart pull-right"></span>
+                            Сдано
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+100</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-circle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            <span class="icon icon-pointer pull-left"></span>
+                            <span class="courses-update">Курс обновился</span> после введения закона от 20 июля 2012 г. № 125-ФЗ
+                            <br>
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-semicircle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-view section-view-advanced">
+                    <div class="courses.html">
+                      <div class="courses-divider">Скоро откроются:</div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Постановка учета, организация бухгалтерии
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в апреле
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Основные средства
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Нематериальные активы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в мае
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Материалы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Товары
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Неотфактурованные товары, поступление и реализация
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Готовая продукция
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Реализация и себестоимость
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bl"></div><div class="b"></div><div class="br"></div>
+              </div>
+
+              <div class="section drop-shadow">
+                <div class="section-inner">
+                  <div class="section-h section-sidebar section-sidebar-" style="background-image: url('images/pattern-h.png')">
+                    <h2>Расчеты</h2>
+                    <div class="section-toggle">
+                      <li class="is-active">
+                        <span>Базовый</span>
+                      </li>
+                      <li>
+                        <span>Продвинутый уровень</span>
+                      </li>
+                    </div>
+                  </div>
+                  <div class="is-active section-view">
+                    <div class="courses.html">
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-white" href="test-checkboxes.html">
+                            <span class="icon icon-restart pull-right"></span>
+                            Сдано
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+100</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-circle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            <span class="icon icon-pointer pull-left"></span>
+                            <span class="courses-update">Курс обновился</span> после введения закона от 20 июля 2012 г. № 125-ФЗ
+                            <br>
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-semicircle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-view section-view-advanced">
+                    <div class="courses.html">
+                      <div class="courses-divider">Скоро откроются:</div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Постановка учета, организация бухгалтерии
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в апреле
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Основные средства
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Нематериальные активы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в мае
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Материалы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Товары
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Неотфактурованные товары, поступление и реализация
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Готовая продукция
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Реализация и себестоимость
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bl"></div><div class="b"></div><div class="br"></div>
+              </div>
+
+              <div class="section drop-shadow">
+                <div class="section-inner">
+                  <div class="section-i section-sidebar section-sidebar-" style="background-image: url('images/pattern-i.png')">
+                    <h2>Расчеты</h2>
+                    <div class="section-toggle">
+                      <li class="is-active">
+                        <span>Базовый</span>
+                      </li>
+                      <li>
+                        <span>Продвинутый уровень</span>
+                      </li>
+                    </div>
+                  </div>
+                  <div class="is-active section-view">
+                    <div class="courses.html">
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-white" href="test-checkboxes.html">
+                            <span class="icon icon-restart pull-right"></span>
+                            Сдано
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+100</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-circle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            <span class="icon icon-pointer pull-left"></span>
+                            <span class="courses-update">Курс обновился</span> после введения закона от 20 июля 2012 г. № 125-ФЗ
+                            <br>
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                      <div class="courses-item">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            <span class="icon icon-semicircle pull-left"></span>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          <a class="button button-orange" href="test-checkboxes.html">
+                            <b class="pull-right">+150</b>
+                            Тест
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-view section-view-advanced">
+                    <div class="courses.html">
+                      <div class="courses-divider">Скоро откроются:</div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Постановка учета, организация бухгалтерии
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Учетная политика, документооборот, первичные документы
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в апреле
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Основные средства
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учёт, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Нематериальные активы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, амортизация, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+                          в мае
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Материалы
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Постановка на учет, оценка, передача в производство, продажа и выбытие
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Товары
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Неотфактурованные товары, поступление и реализация
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                      <div class="courses-item is-unavailable">
+                        <div class="courses-item-body">
+                          <div class="courses-item-title">
+                            Готовая продукция
+                            <span class="icon icon-pro"></span>
+                          </div>
+                          <div class="courses-item-description">
+                            Реализация и себестоимость
+                          </div>
+                        </div>
+                        <div class="courses-item-aside">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bl"></div><div class="b"></div><div class="br"></div>
+              </div>
+
+              <div class="section drop-shadow">
+                <div class="section-inner">
+                  <div class="section-e section-sidebar section-sidebar-">
                     <h2><i></i>Система<br>Главбух</h2>
                     <div class="section-toggle">
                       <li>
@@ -1060,18 +1774,18 @@
                     </div>
                   </div>
                   <div class="section-view">
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Постановка учета, организация бухгалтерии</a>
+                            <a class="link link-black" href="course-page.html">Постановка учета, организация бухгалтерии</a>
                           </div>
                           <div class="courses-item-description">
                             Учетная политика, документооборот, первичные документы
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-white" href="test-checkboxes">
+                          <a class="button button-white" href="test-checkboxes.html">
                             <span class="icon icon-restart pull-right"></span>
                             Сдано
                           </a>
@@ -1080,14 +1794,14 @@
                       <div class="courses-item">
                         <div class="courses-item-body">
                           <div class="courses-item-title">
-                            <a class="link link-black" href="course-page">Основные средства</a>
+                            <a class="link link-black" href="course-page.html">Основные средства</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учёт, оценка, амортизация, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -1097,7 +1811,7 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Нематериальные активы</a>
+                            <a class="link link-black" href="course-page.html">Нематериальные активы</a>
                           </div>
                           <div class="courses-item-description">
                             <span class="icon icon-pointer pull-left"></span>
@@ -1107,7 +1821,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -1117,14 +1831,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-semicircle pull-left"></span>
-                            <a class="link link-black" href="course-page">Материалы</a>
+                            <a class="link link-black" href="course-page.html">Материалы</a>
                           </div>
                           <div class="courses-item-description">
                             Постановка на учет, оценка, передача в производство, продажа и выбытие
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+150</b>
                             Тест
                           </a>
@@ -1134,14 +1848,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Товары</a>
+                            <a class="link link-black" href="course-page.html">Товары</a>
                           </div>
                           <div class="courses-item-description">
                             Неотфактурованные товары, поступление и реализация
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -1151,14 +1865,14 @@
                         <div class="courses-item-body">
                           <div class="courses-item-title">
                             <span class="icon icon-circle pull-left"></span>
-                            <a class="link link-black" href="course-page">Готовая продукция</a>
+                            <a class="link link-black" href="course-page.html">Готовая продукция</a>
                           </div>
                           <div class="courses-item-description">
                             Реализация и себестоимость
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                          <a class="button button-orange" href="test-checkboxes">
+                          <a class="button button-orange" href="test-checkboxes.html">
                             <b class="pull-right">+100</b>
                             Тест
                           </a>
@@ -1187,7 +1901,7 @@
                         <!-- = partial('partials/chunks/drop-shadow') -->
                       </div>
                     </div>
-                    <div class="courses">
+                    <div class="courses.html">
                       <div class="courses-divider">Скоро откроются:</div>
                       <div class="courses-item is-unavailable">
                         <div class="courses-item-body">
@@ -1214,7 +1928,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1242,7 +1956,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1256,7 +1970,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                       <div class="courses-item is-unavailable">
@@ -1270,7 +1984,7 @@
                           </div>
                         </div>
                         <div class="courses-item-aside">
-                        
+
                         </div>
                       </div>
                     </div>
@@ -1288,8 +2002,7 @@
               <div class="artgorbunov">
                 <div class="artgorbunov-logo">
                   <a class="link link-black" href="#">
-                    в&nbsp;Дизайн-бюро
-                    <br>
+                    в&nbsp;Дизайн-бюро<br>
                     Артёма Горбунова
                   </a>
                 </div>
@@ -1325,7 +2038,25 @@
         </div>
       </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <a href="#" class="b-awards__box show">
+        <div class="b-awards u-clear-fix">
+            <div class="b-awards__pic" style="background-position: 0 0;"></div>
+            <div class="b-awards__text">
+                <span>Вы заработали награду!</span>
+                <b>«Первое место»</b>
+            </div>
+        </div>
+        <div class="b-awards u-clear-fix">
+            <div class="b-awards__pic" style="background-position: 0 -60px;"></div>
+            <div class="b-awards__text">
+                <span>Вы заработали награду!</span>
+                <b>«Сдал общий тест»</b>
+            </div>
+        </div>
+    </a>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascripts/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="javascripts/plugins.js"></script>
     <script src="javascripts/script.js"></script>
