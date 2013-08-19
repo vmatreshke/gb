@@ -241,7 +241,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 14px;
+  margin: 0 0 8px;
 }
 
 hr {
@@ -2032,6 +2032,10 @@ a.button {
 .formatted p {
   margin: 0 0 8px;
 }
+.formatted p img, .formatted p iframe {
+  margin: 8px 0;
+}
+
 .formatted p + ul, .formatted p + ol {
   margin-top: -8px;
 }
@@ -2288,8 +2292,17 @@ a.button {
 }
 
 .inset-reference {
-  color: #693;
+  color: #686;
   margin: 8px 20px 16px;
+}
+
+.debetcredit {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  word-spacing: -.2em;
+  margin-right: -.2em;
+  font-size: 90%;
+  font-weight: bold;
 }
 
 .labeled {
