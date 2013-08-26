@@ -2291,6 +2291,11 @@ a.button {
   margin: 8px 20px 16px;
 }
 
+.inset-storno {
+  color: #844;
+  margin: 8px 20px 16px;
+}
+
 .debetcredit {
   text-transform: uppercase;
   letter-spacing: .2em;
