@@ -1752,13 +1752,8 @@ a.button {
   top: 10px;
 }
 .l-header-alt .menu {
-  top: 9px;
-  margin-bottom: 41px;
-}
-
-.l-page > div:first-child {
-  position: relative;
-  z-index: 300;
+  top: 14px;
+  margin-bottom: 46px;
 }
 
 .exam-rating {
@@ -3565,7 +3560,8 @@ a.media-large:after {
   margin-bottom: 20px;
 }
 .section:last-child .section-view {
-  background: url(../images/pattern-e.jpg) repeat 0 0;
+    background: #e3dccf;
+    background: #e3dccf url(../images/pattern-bss.jpg) repeat 0 0;
 }
 .section:last-child {
   border-radius: 4px;
@@ -5734,4 +5730,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffe958', e
 .b-print__second-part
 {
     display: none;
+}
+.rx-userbar
+{
+    background-color: #252525;
+    background-image: -webkit-linear-gradient(#2e2e2e, #1c1c1c);
+    background-image: -moz-linear-gradient(#2e2e2e, #1c1c1c);
+    background-image: -ms-linear-gradient(#2e2e2e, #1c1c1c);
+    background-image: -o-linear-gradient(#2e2e2e, #1c1c1c);
+    background-image: linear-gradient(#2e2e2e, #1c1c1c);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr='#FF2E2E2E', endColorStr='#FF1C1C1C')";
+    color: #999;
+    font: 14px/20px sans-serif;
+    position: absolute;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+}
+.choice__input
+{
+    margin: 13px 10px 3px;
+    min-height: 0;
+}
+.choice__input input
+{
+    float: left;
+    vertical-align: top;
+    width: 150px;
+    font-size: 17px;
+    line-height: 24px;
+}
+.choice__input input + div
+{
+    float: left;
+    vertical-align: top;
+    margin: 6px 0 0 10px;
 }
