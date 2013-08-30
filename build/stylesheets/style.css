@@ -3656,13 +3656,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6600c385', e
 .section-d:before {
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwMHB4IiBoZWlnaHQ9IjEwMDBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNDI5LjkxOTkiIHkxPSIzODIuNjc4NyIgeDI9IjQyOS45MTk5IiB5Mj0iNDgyLjY3ODciPg0KCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkQ3QTYiLz4NCgk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRjk5NTlBIi8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPHJlY3QgeD0iMzc5LjkyIiB5PSIzODIuNjc5IiBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIi8+DQo8L3N2Zz4NCg==);
-  background-image: -moz-linear-gradient(top, #ffd7a6, #f9959a);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffd7a6), to(#f9959a));
-  background-image: -webkit-linear-gradient( #ffd7a6, #f9959a);
-  background-image: -o-linear-gradient(top, #ffd7a6, #f9959a);
-  background-image: -ms-linear-gradient(top, #ffd7a6, #f9959a);
-  background-image: linear-gradient( #ffd7a6, #f9959a);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffd7a6', endColorstr = '#f9959a');
+  background: -moz-linear-gradient(top, #ffd7a6, #f9959a);
+  background: -webkit-gradient(linear, center top, center bottom, from(#ffd7a6), to(#f9959a));
+  background: -webkit-linear-gradient( #ffd7a6, #f9959a);
+  background: -o-linear-gradient(top, #ffd7a6, #f9959a);
+  background: -ms-linear-gradient(top, #ffd7a6, #f9959a);
+  background: linear-gradient( #ffd7a6, #f9959a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffd7a6ff', endColorstr = '#f9959aff',GradientType=0 );  IE6-8
 }
 .section-bss {
   background: #595959;
